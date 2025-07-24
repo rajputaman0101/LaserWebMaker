@@ -29,27 +29,28 @@ export default function Home() {
                 </p>
 
                 <div className="flex items-end gap-1 pb-[2px] z-10 font-semibold">
-                  {[
-                    "/images/icons/star.png",
-                    "/images/icons/star.png",
-                    "/images/icons/star.png",
-                    "/images/icons/star.png",
-                    "/images/icons/half_star.png",
-                  ].map((src, index) => (
-                    <div
-                      key={index}
-                      className="relative w-[4.96px] h-[4.66px] md:w-[10px] md:h-[10px] "
-                    >
-                      <Image
-                        src={src}
-                        alt="Star icon"
-                        fill
-                        className="object-contain"
-                        priority
-                      />
-                    </div>
-                  ))}
-                </div>
+  {[
+    "/images/icons/star.png",
+    "/images/icons/star.png",
+    "/images/icons/star.png",
+    "/images/icons/star.png",
+    "/images/icons/half_star.png",
+  ].map((src, index) => (
+    <div
+      key={index}
+      className="relative w-[4.96px] h-[4.66px] md:w-[10px] md:h-[10px]"
+    >
+      <Image
+        src={src}
+        alt="Star icon"
+        fill
+        className="object-contain"
+        priority
+      />
+    </div>
+  ))}
+</div>
+
 
                 <p className="text-black text-sm z-10 font-semibold">)</p>
               </div>
