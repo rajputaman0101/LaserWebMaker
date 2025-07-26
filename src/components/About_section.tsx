@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import Image from "next/image";
-
-export default function About_section() {
-  return (
-    <div className="py-10 px-15 bg-[#F6F8FB]">
-=======
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -61,7 +53,6 @@ export default function About_section() {
 
   return (
     <div className="py-10 px-[15px] md:px-15 bg-[#F6F8FB]">
->>>>>>> daily-update
       <div className="container-width mx-auto inner-row-section flex gap-[30%]">
         <div className="grid grid-cols-1 md:[grid-template-columns:1fr_2fr_1fr] gap-[30px] w-full ">
           {/* Left Column with Actual Image Size */}
@@ -190,101 +181,6 @@ export default function About_section() {
           </div>
 
           {/* Right Column */}
-<<<<<<< HEAD
-          <div className="">
-            <div className="counter-box grid grid-cols-1 gap-[20px]">
-              <div className="bg-[#C6DEEA] rounded-lg h-full">
-                <div className="inner items-center flex pl-5 pr-2 pt-[10px] justify-between">
-                  <div className="counter ">
-                    <h2 className="text-black text-[28px] font-bold leading-[36px]">
-                      {" "}
-                      11 + Years
-                    </h2>
-                    <p className="text-[#000000]/40 text-[14px] font-bold leading-[18px] md:leading[120%]">
-                      Track Records
-                    </p>
-                  </div>
-                  <div className="image">
-                    <Image
-                      src="/images/home_img/counter1img.png"
-                      alt="img"
-                      width={113}
-                      height={120}
-                      priority
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="bg-[#C6DEEA] rounded-lg h-full">
-                <div className="inner items-center flex pl-5 pr-2 pt-[10px] justify-between">
-                  <div className="counter ">
-                    <h2 className="text-black text-[28px] font-bold leading-[36px]">
-                      {" "}
-                      10000+
-                    </h2>
-                    <p className="text-[#000000]/40 text-[14px] font-bold leading-[18px] md:leading[120%]">
-                      Happy Customers
-                    </p>
-                  </div>
-                  <div className="image">
-                    <Image
-                      src="/images/home_img/counter1img.png"
-                      alt="img"
-                      width={113}
-                      height={120}
-                      priority
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="bg-[#C6DEEA] rounded-lg h-full">
-                <div className="inner items-center flex pl-5 pr-2 pt-[10px] justify-between">
-                  <div className="counter ">
-                    <h2 className="text-black text-[28px] font-bold leading-[36px]">
-                      {" "}
-                      90+
-                    </h2>
-                    <p className="text-[#000000]/40 text-[14px] font-bold leading-[18px] md:leading[120%]">
-                     Expert Team  
-                    </p>
-                  </div>
-                  <div className="image">
-                    <Image
-                      src="/images/home_img/counter1img.png"
-                      alt="img"
-                      width={113}
-                      height={120}
-                      priority
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="bg-[#C6DEEA] rounded-lg h-full">
-                <div className="inner items-center flex pl-5 pr-2 pt-[10px] justify-between">
-                  <div className="counter ">
-                    <h2 className="text-black text-[28px] font-bold leading-[36px]">
-                      {" "}
-                      900+
-                    </h2>
-                    <p className="text-[#000000]/40 text-[14px] font-bold leading-[18px] md:leading[120%]">
-                      Total Reviews
-                    </p>
-                  </div>
-                  <div className="image">
-                    <Image
-                      src="/images/home_img/counter1img.png"
-                      alt="img"
-                      width={113}
-                      height={120}
-                      priority
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-=======
            
     <div ref={ref} className="grid grid-cols-1 gap-[20px] h-fit">
       {counterData.map((item, index) => (
@@ -314,7 +210,6 @@ export default function About_section() {
       ))}
     </div>
         </div>
->>>>>>> daily-update
       </div>
     </div>
   );
