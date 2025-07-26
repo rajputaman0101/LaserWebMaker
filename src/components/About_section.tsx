@@ -1,9 +1,67 @@
+<<<<<<< HEAD
 import React from "react";
 import Image from "next/image";
 
 export default function About_section() {
   return (
     <div className="py-10 px-15 bg-[#F6F8FB]">
+=======
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
+
+
+const counterData = [
+  {
+    value: 11,
+    suffix: "+ Years",
+    label: 'Years Experience',
+    bg: '#C6DEEA',
+    image: '/images/icons/counter1img.png',
+    imageW: 113,
+    imageH: 120,
+  },
+  {
+    value: 10000,
+    label: 'Happy Customers',
+    bg: '#C8CCCD',
+    image: '/images/icons/happy-customers.png',
+    imageW: 75,
+    imageH: 100,
+  },
+  {
+    value: 90,
+    label: 'Expert Team',
+    bg: '#D9F5EF',
+    image: '/images/icons/expert-team.png',
+    imageW: 90,
+    imageH: 100,
+  },
+  {
+    value: 900,
+    label: 'Total Reviews',
+    bg: '#ECEBE9',
+    image: '/images/icons/total-reviews.png',
+    imageW: 75,
+    imageH: 100,
+  },
+];
+
+
+export default function About_section() {
+   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [hasViewed, setHasViewed] = useState(false);
+
+  useEffect(() => {
+    if (inView) setHasViewed(true);
+  }, [inView]);
+
+  return (
+    <div className="py-10 px-[15px] md:px-15 bg-[#F6F8FB]">
+>>>>>>> daily-update
       <div className="container-width mx-auto inner-row-section flex gap-[30%]">
         <div className="grid grid-cols-1 md:[grid-template-columns:1fr_2fr_1fr] gap-[30px] w-full ">
           {/* Left Column with Actual Image Size */}
@@ -132,6 +190,7 @@ export default function About_section() {
           </div>
 
           {/* Right Column */}
+<<<<<<< HEAD
           <div className="">
             <div className="counter-box grid grid-cols-1 gap-[20px]">
               <div className="bg-[#C6DEEA] rounded-lg h-full">
@@ -225,6 +284,37 @@ export default function About_section() {
             </div>
           </div>
         </div>
+=======
+           
+    <div ref={ref} className="grid grid-cols-1 gap-[20px] h-fit">
+      {counterData.map((item, index) => (
+        <div key={index} className=" rounded-lg h-full"
+        style={{ backgroundColor: item.bg }}>
+          <div className="inner items-center flex pl-5 pr-2 pt-[10px] justify-between">
+            <div className="counter">
+              <h2 className="text-black text-[28px] font-bold leading-[36px]">
+                {hasViewed ? <CountUp start={0} end={item.value} duration={2} /> : 0}
+                  {item.suffix ? ` ${item.suffix}` : "+"}
+              </h2>
+              <p className="text-[#000000]/40 text-[14px] font-bold leading-[18px] md:leading[120%]">
+                {item.label}
+              </p>
+            </div>
+            <div>
+              <Image
+                src={item.image}
+                alt={item.label}
+                width={item.imageW}
+                height={item.imageH}
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+        </div>
+>>>>>>> daily-update
       </div>
     </div>
   );

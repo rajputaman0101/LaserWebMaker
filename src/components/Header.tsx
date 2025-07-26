@@ -29,8 +29,13 @@ export default function Header() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <header className="bg-black shadow-md sticky top-0 z-50">
       <div className=" container-width mx-auto px-[60px] py-[20px] flex justify-between items-center">
+=======
+    <header className="bg-black sticky top-0 z-50 ">
+      <div className=" container-width mx-auto px-[15px] md:px-[60px] py-[20px] flex justify-between items-center">
+>>>>>>> daily-update
         {/* Left Side: Logo + Nav */}
         <div className="flex items-center space-x-10">
           {/* Logo */}

@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
+<<<<<<< HEAD
 import About_section from "./About_section";
+=======
+
+>>>>>>> daily-update
 // import { Star } from "lucide-react";
 
 export default function Home() {
@@ -307,7 +311,11 @@ export default function Home() {
           </div>
         </div> */}
 
+<<<<<<< HEAD
         <div className=" container-width mx-auto inner-location-section flex flex-col lg:flex-row gap-[30px]">
+=======
+        <div className=" container-width mx-auto inner-location-section flex flex-col lg:flex-row md:gap-30 gap-[16px]">
+>>>>>>> daily-update
           {/* First Location */}
           <div className=" flex">
             <div className="border-l border-white/10 bg-[#5098D6]/50 rounded-[3px] h-auto mr-[30px]"></div>
@@ -341,7 +349,11 @@ export default function Home() {
           {/* Repeat the same pattern for other locations */}
           <div className="flex">
             <div className="border-l border-white/10 bg-[#5098D6]/50 rounded-[3px]  h-auto mr-[30px]"></div>
+<<<<<<< HEAD
             <div className="first-location inline-grid gap-[14px] h-[110px] w-[295px] md:w-[370px] xl:w-[295px]">
+=======
+            <div className="first-location inline-grid gap-[14px] h-[110px] w-[295px] md:w-[370px] xl:w-[295px] ">
+>>>>>>> daily-update
               <div>
                 <Image
                   src="/images/icons/twemoji_flag-malaysia.svg"
@@ -355,9 +367,21 @@ export default function Home() {
                 <h4 className="text-white leading-[150%] font-medium">
                   Malaysia
                 </h4>
+<<<<<<< HEAD
                 <div className="gap-[6px] flex">
                   <p className="text-[12px] font-light text-white">
                     +60-123456789
+=======
+                  <div className="gap-[6px] flex">
+                  <p className="text-[12px] leading-[150%] font-light text-white">
+                    +91-1203202969
+                  </p>
+                  <p className="text-[12px] leading-[150%] font-light text-white">
+                    ,
+                  </p>
+                  <p className="text-[12px] leading-[150%] font-light text-white">
+                    7291934043
+>>>>>>> daily-update
                   </p>
                 </div>
               </div>
@@ -380,9 +404,21 @@ export default function Home() {
                 <h4 className="text-white leading-[150%] font-medium">
                   Saudi Arabia
                 </h4>
+<<<<<<< HEAD
                 <div className="gap-[6px] flex">
                   <p className="text-[12px] font-light text-white">
                     +966-987654321
+=======
+                  <div className="gap-[6px] flex">
+                  <p className="text-[12px] leading-[150%] font-light text-white">
+                    +91-1203202969
+                  </p>
+                  <p className="text-[12px] leading-[150%] font-light text-white">
+                    ,
+                  </p>
+                  <p className="text-[12px] leading-[150%] font-light text-white">
+                    7291934043
+>>>>>>> daily-update
                   </p>
                 </div>
               </div>
@@ -393,7 +429,11 @@ export default function Home() {
 
       {/* new section end  */}
       {/* about us section start */}
+<<<<<<< HEAD
       <About_section />
+=======
+      
+>>>>>>> daily-update
     </>
   );
 }
