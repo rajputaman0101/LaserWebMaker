@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <header className="bg-black sticky top-0 z-50 ">
-      <div className=" container-width mx-auto px-[15px] md:px-[60px] py-[20px] flex justify-between items-center">
+      <div className="container-width mx-auto px-[15px] md:px-[60px] py-[20px] flex justify-between items-center">
         {/* Left Side: Logo + Nav */}
         <div className="flex items-center space-x-10">
           {/* Logo */}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import { DM_Sans, Red_Hat_Display } from "next/font/google";
+import { DM_Sans, Red_Hat_Display, Noto_Sans_HK, } from "next/font/google";
 // Define the font
 import "./globals.css";
 
@@ -16,6 +16,12 @@ const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-red-hat-display",
+  display: "swap",
+});
+const NotoSansHK = Noto_Sans_HK({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-noto-sans-hk",
   display: "swap",
 });
 
@@ -42,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${redHatDisplay.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${redHatDisplay.variable} ${NotoSansHK.variable}`}>
       <body className="font-dm-sans">
         {children}
       </body>
