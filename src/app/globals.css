@@ -177,3 +177,15 @@ body {
 /*  */
 
 
+/* Swiper custom pagination color */
+.swiper-pagination-custom .swiper-pagination-bullet {
+  background: #CCE7C3; /* Change to your desired color */
+  opacity: 1;
+  height: 12px;
+  width: 12px;
+}
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background: #B6AAFF; /* Active bullet color */
+  height: 12px;
+  width: 12px;
+}

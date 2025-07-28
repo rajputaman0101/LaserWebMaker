@@ -7,6 +7,7 @@ import About_section from "@/components/About_section";
 import Services_faqs from "@/components/Services_faqs";
 import Serving_Industries from "@/components/Serving_Industries";
 import Testimonials from "@/components/Testimonials";
+import Our_Process from "@/components/Our_Process";
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
     <Services_faqs />
     <Serving_Industries/>
     <Testimonials/>
+    <Our_Process/>
 
    {/* <h1 className="text-3xl font-bold underline">
       Hello world!
