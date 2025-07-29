@@ -8,6 +8,7 @@ import Services_faqs from "@/components/Services_faqs";
 import Serving_Industries from "@/components/Serving_Industries";
 import Testimonials from "@/components/Testimonials";
 import Our_Process from "@/components/Our_Process";
+import ClientFeedback from "@/components/ClientFeedback";
 
 
 export default function Home() {
@@ -21,10 +22,11 @@ export default function Home() {
     <Serving_Industries/>
     <Testimonials/>
     <Our_Process/>
+    <ClientFeedback/>
 
    {/* <h1 className="text-3xl font-bold underline">
       Hello world!
-    </h1> */}
+    </h1> */}     
     {/* <About/> */}
     
     </>

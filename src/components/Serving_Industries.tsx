@@ -106,7 +106,8 @@ export default function Serving_Industries() {
 //   ];
 
   return (
-    <div className="container-width mx-auto py-10 px-[15px] md:px-15 bg-[#F6F8FB]">
+   <div className='bg-[#F6F8FB]'>
+     <div className="container-width mx-auto py-10 px-[15px] md:px-15 bg-[#F6F8FB]">
       <div className="inner-section">
         <div className="heading flex flex-col md:flex-row justify-between items-center md:items-center gap-4">
           <h2 className="text-[32px] md:text-[48px] font-normal text-black leading-[120%]">
@@ -126,7 +127,7 @@ export default function Serving_Industries() {
         <Link
           key={index}
           href={card.link}
-          className="relative w-full sm:w-[48%] lg:w-[23%] h-[380px] rounded-lg overflow-hidden group"
+          className="relative w-full sm:w-[48%] lg:w-[23%] h-[280px] rounded-lg overflow-hidden group"
         >
           <div
             className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
@@ -153,5 +154,6 @@ export default function Serving_Industries() {
         </div>
       </div>
     </div>
+   </div>
   );
 }

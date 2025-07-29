@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import { DM_Sans, Red_Hat_Display, Noto_Sans_HK, } from "next/font/google";
+import ScrollbarWatcher from "@/components/ScrollbarWatcher";
 // Define the font
 import "./globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${redHatDisplay.variable} ${NotoSansHK.variable}`}>
       <body className="font-dm-sans">
+        <ScrollbarWatcher />
         {children}
       </body>
     </html>

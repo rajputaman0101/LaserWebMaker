@@ -9,27 +9,49 @@ export default function Header() {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const subMenuRef = useRef<HTMLDivElement>(null);
   const [isClient, setIsClient] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  // Close submenu when clicking outside
+  // Close submenu on outside click
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (subMenuRef.current && !subMenuRef.current.contains(event.target as Node)) {
+      if (
+        subMenuRef.current &&
+        !subMenuRef.current.contains(event.target as Node)
+      ) {
         setIsSubMenuOpen(false);
       }
     }
-
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  return (
-    <header className="bg-black sticky top-0 z-50 ">
+  // Scroll hide/show logic
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setShowHeader(false); // Scrolling down
+      } else {
+        setShowHeader(true); // Scrolling up
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+ return (
+    <header
+      className={`bg-black sticky top-0 z-50 transition-transform duration-300 ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="container-width mx-auto px-[15px] md:px-[60px] py-[20px] flex justify-between items-center">
         {/* Left Side: Logo + Nav */}
         <div className="flex items-center space-x-10">

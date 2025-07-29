@@ -31,8 +31,35 @@ body {
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
-  /* width: 1440px; */
+   
+  /* width: 1440px; */ 
+   transition: scrollbar-color 0.3s ease;
 }
+
+body.hide-scrollbar::-webkit-scrollbar {
+  width: 0 !important;
+  background: transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #5A9DD5;
+  border-radius: 4px;
+   transition: opacity 0.5s ease;
+   opacity: 0;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
 .container-width{
   max-width: 1440px;
 }
@@ -184,8 +211,19 @@ body {
   height: 12px;
   width: 12px;
 }
+.client-swiper-pagination-custom .swiper-pagination-bullet {
+  background: #CCE7C3; /* Change to your desired color */
+  opacity: 1;
+  height: 12px;
+  width: 12px;
+}
 .swiper-pagination-custom .swiper-pagination-bullet-active {
   background: #B6AAFF; /* Active bullet color */
+  height: 12px;
+  width: 12px;
+}
+.client-swiper-pagination-custom .swiper-pagination-bullet-active{
+    background: #B6AAFF; /* Active bullet color */
   height: 12px;
   width: 12px;
 }
