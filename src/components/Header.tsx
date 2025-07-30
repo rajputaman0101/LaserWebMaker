@@ -48,7 +48,7 @@ export default function Header() {
 
  return (
     <header
-      className={`bg-black sticky top-0 z-50 transition-transform duration-300 ${
+      className={`bg-black sticky top-0 z-50 transition-transform duration-500 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -96,7 +96,7 @@ export default function Header() {
               {isClient && (
                 <div
                   className={`absolute left-0 top-12 bg-white border border-gray-200 rounded-md shadow-lg z-20 
-                    transition-all duration-300 ease-in-out 
+                    transition-all duration-500 ease-in-out 
                     ${isSubMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-1"}
                     w-[260px] p-3 space-y-2`}
                   onMouseLeave={() => setIsSubMenuOpen(false)}
@@ -206,7 +206,7 @@ export default function Header() {
             >
               Services
               <ChevronDown
-                className={`ml-1 h-4 w-4 transition-transform duration-300 ${
+                className={`ml-1 h-4 w-4 transition-transform duration-500 ${
                   isSubMenuOpen ? "rotate-180" : ""
                 }`}
               />
@@ -214,7 +214,7 @@ export default function Header() {
 
             {/* Animated submenu */}
             <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
                 isSubMenuOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
               }`}
             >

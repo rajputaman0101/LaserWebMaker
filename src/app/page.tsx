@@ -9,6 +9,8 @@ import Serving_Industries from "@/components/Serving_Industries";
 import Testimonials from "@/components/Testimonials";
 import Our_Process from "@/components/Our_Process";
 import ClientFeedback from "@/components/ClientFeedback";
+import OurPatners from "@/components/OurPatners";
+import TechnologyTabs from "@/components/TechnologyTabs";
 
 
 export default function Home() {
@@ -23,6 +25,10 @@ export default function Home() {
     <Testimonials/>
     <Our_Process/>
     <ClientFeedback/>
+    <OurPatners/>
+    <TechnologyTabs/>
+    {/* <VideoSlider/> */}
+
 
    {/* <h1 className="text-3xl font-bold underline">
       Hello world!

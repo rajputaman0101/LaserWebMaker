@@ -60,7 +60,7 @@ export default function Services_faqs() {
               return (
                 <div
                   key={idx}
-                  className={`md:flex block gap-10 pt-[16px] transition-all duration-300 overflow-hidden ${
+                  className={`md:flex block gap-10 pt-[16px] transition-all duration-500 overflow-hidden ${
                     idx !== 0 ? "border-t-2 border-[#000000]/10" : ""
                   }`}
                 >

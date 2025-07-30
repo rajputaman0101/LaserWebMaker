@@ -112,16 +112,16 @@ export default function VideoSlider() {
   };
 
   return (
-    <div className="container-width mx-auto px-[15px] md:px-15 py-10 bg-[#F6F8FB] relative z-10 ">
+    <div className="container-width mx-auto px-[15px] md:px-15 py-10 bg-[#fff] relative z-10 ">
       <div className="flex flex-col gap-10">
         <div className="flex justify-center ">
           <h2 className="text-black text-[32px] md:text-[48px] leading-[120%] font-normal">
-            Our Client Feedback
+            Our Clients Feedback
           </h2>
         </div>
         <div className="relative">
           {/* Custom Arrows */}
-          <div className="hidden md:flex justify-between absolute top-1/2 -translate-y-1/2 z-10 w-full px-2">
+          <div className="flex justify-between absolute top-1/2 -translate-y-1/2 z-10 w-full px-2">
             <button
               onClick={handlePrev} // ✅ hook up event
               className="swiper-button-prev-custom cursor-pointer bg-[#B6AAFF] hover:bg-[#CCE7C3] transition-all duration-500 text-white p-2 rounded-full"
@@ -140,10 +140,10 @@ export default function VideoSlider() {
            slidesPerView={5}
   spaceBetween={20}
   loop={true}
-  pagination={{
-    clickable: true,
-    el: ".client-swiper-pagination-custom",
-  }}
+  // pagination={{
+  //   clickable: true,
+  //   el: ".client-swiper-pagination-custom",
+  // }}
   breakpoints={{
     0: {
       slidesPerView: 1,
@@ -167,7 +167,7 @@ export default function VideoSlider() {
             {videoData.map((vid, index) => (
               <SwiperSlide key={vid.id}>
                 <div
-                  className="relative group overflow-hidden rounded-lg shadow-lg"
+                  className="relative group overflow-hidden rounded-lg shadow-lg "
                   onMouseEnter={() => videoRefs.current[vid.id]?.play()}
                   onMouseLeave={() => videoRefs.current[vid.id]?.pause()}
                 >
@@ -176,7 +176,7 @@ export default function VideoSlider() {
                       if (el) videoRefs.current[vid.id] = el;
                     }}
                     src={vid.videoSrc}
-                    className="w-full h-[330px] object-cover"
+                    className="w-full h-[480px] md:h-[330px] object-cover"
                     muted={mutedStates[vid.id] ?? true}
                     loop
                     playsInline
@@ -224,9 +224,9 @@ export default function VideoSlider() {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="relative">
+          {/* <div className="relative">
             <div className="client-swiper-pagination-custom flex justify-center mt-[20px]" />
-          </div>
+          </div> */}
         </div>
       </div>
 

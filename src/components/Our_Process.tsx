@@ -6,7 +6,7 @@ export default function Our_Process() {
      <div className='container-width mx-auto  px-[15px] md:px-15 py-10 '>
 
     <div className="process-heading flex flex-col gap-10">
-      <div className="flex flex-col md:flex-row justify-between gap-9 md:gap-12">
+      <div className="flex flex-col md:flex-row justify-between gap-9 md:gap-12 items-start">
         <div className="w-full md:w-1/2">
           <h2 className='text-black text-[32px] md:text-[48px] leading-[120%] font-normal '>Website Development Process</h2>
         </div>
@@ -17,10 +17,10 @@ export default function Our_Process() {
 
 
    <div className="outer-process-step bg-white p-5 w-full">
-  <div className="flex flex-col md:flex-row flex-wrap gap-[30px] md:pl-[30px]">
+  <div className="flex flex-col md:flex-row flex-wrap gap-[30px] md:pl-[30px] ">
 
     {/* Inception - slightly bigger */}
-    <div className='w-full md:w-[42%]'>
+    <div className='w-full md:max-w-[42%]'>
     <div className=" bg-gray-100 p-5 rounded-xl ">
       <div className="flex flex-col gap-4">
         <h4 className="text-[20px] md:text-[24px] font-normal text-black leading-[120%]">Inception</h4>
@@ -33,7 +33,7 @@ export default function Our_Process() {
     
 
     {/* Contract - slightly smaller */}
-    <div className=' md:pl-[30px] w-full md:w-[55.5%] '>
+    <div className=' md:pl-[30px] w-full md:max-w-[55.5%] '>
 
       <div className=" bg-gray-100 p-5  rounded-xl  ">
       <div className="flex flex-col gap-4">
@@ -46,7 +46,7 @@ export default function Our_Process() {
     </div>
 
     {/* Build - large */}
-    <div className=' w-full md:w-[48%] md:pr-[10px]'>
+    <div className=' w-full md:max-w-[48%] md:pr-[10px]'>
     <div className="bg-gray-100 p-5 rounded-xl">
       <div className="flex flex-col gap-4">
         <div className='flex justify-between items-center flex-wrap gap-3'>
@@ -85,7 +85,7 @@ export default function Our_Process() {
     <div className="flex justify-center ">
          <a
             href="/serving-industries"
-            className=" px-[16px] py-3 w-full md:w-[346px] text-white text-[16px] md:text-[20px] border rounded leading-[26px] bg-[#5E9ED5]   hover:bg-transparent hover:text-[#5E9ED5] hover:border-[#5E9ED5] transition-all duration-300 font-semibold text-center"
+            className=" px-[16px] py-3 w-full md:w-[346px] text-white text-[16px] md:text-[20px] border rounded leading-[26px] bg-[#5E9ED5]   hover:bg-transparent hover:text-[#5E9ED5] hover:border-[#5E9ED5] transition-all duration-500 font-semibold text-center"
           >
             Get Service
           </a>

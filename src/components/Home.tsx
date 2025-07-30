@@ -187,7 +187,7 @@ export default function Home() {
                 width={24}
                 height={24}
                 priority
-                className="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2"
+                className="transform transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2"
               />
             </div>
           </div>

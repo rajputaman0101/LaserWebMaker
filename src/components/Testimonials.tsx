@@ -159,7 +159,7 @@ export default function Testimonials() {
 
           <a
             href="/serving-industries"
-            className=" px-[16px] py-3 text-[#057BC1] text-[20px] font-[Red_Hat_Display]  rounded leading-[150%] bg-[#fff] hover:bg-[#057BC1] hover:text-[#fff] transition-all duration-300 font-semibold text-center"
+            className=" px-[16px] py-3 text-[#057BC1] text-[20px] font-red-hat rounded leading-[150%] bg-[#fff] hover:bg-[#057BC1] hover:text-[#fff] transition-all duration-500 font-semibold text-center"
           >
             View All
           </a>
@@ -171,7 +171,7 @@ export default function Testimonials() {
         <div className="relative">
           {/* Desktop Arrows */}
           {/* Arrows - Only visible on desktop */}
-          <div className="hidden md:flex justify-between absolute top-1/2 -translate-y-1/2 z-10 w-full px-2">
+          <div className="flex justify-between absolute top-1/2 -translate-y-1/2 z-10 w-full px-2">
             <div className="swiper-button-prev-custom cursor-pointer bg-[#B6AAFF] hover:bg-[#CCE7C3] transition-all duration-500 text-white p-2 rounded-full  ">
               <ArrowLeft size={12} />
             </div>
@@ -187,10 +187,10 @@ export default function Testimonials() {
               nextEl: ".swiper-button-next-custom",
               prevEl: ".swiper-button-prev-custom",
             }}
-            pagination={{
-              clickable: true,
-              el: ".swiper-pagination-custom",
-            }}
+            // pagination={{
+            //   clickable: true,
+            //   el: ".swiper-pagination-custom",
+            // }}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -261,9 +261,9 @@ export default function Testimonials() {
 
           {/* Pagination - Visible on all devices */}
         </div>
-        <div className="relative">
+        {/* <div className="relative">
           <div className="swiper-pagination-custom flex justify-center mt-[20px]" />
-        </div>
+        </div> */}
       </div>
 
       {/* Client  Testimonials End */}

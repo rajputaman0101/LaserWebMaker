@@ -115,7 +115,7 @@ export default function Serving_Industries() {
           </h2>
           <a
             href="/serving-industries"
-            className="hidden md:inline-block px-[87px] py-3 text-white text-[16px] font-semibold rounded leading-[150%] bg-[#5E9ED5] border border-transparent hover:border-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] transition-all duration-300"
+            className="hidden md:inline-block px-[87px] py-3 text-white text-[16px] font-semibold rounded leading-[150%] bg-[#5E9ED5] border border-transparent hover:border-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] transition-all duration-500"
           >
             View All
           </a>
@@ -147,7 +147,7 @@ export default function Serving_Industries() {
         <div className="btn flex justify-center items-center md:hidden pt-[40px]">
           <a
             href="/serving-industries"
-            className="block md:hidden px-[87px] py-3 text-white text-[16px] font-semibold rounded leading-[150%] bg-[#5E9ED5] border border-transparent hover:border-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] transition-all duration-300"
+            className="block md:hidden px-[87px] py-3 text-white text-[16px] font-semibold rounded leading-[150%] bg-[#5E9ED5] border border-transparent hover:border-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] transition-all duration-500"
           >
             View All
           </a>
