@@ -11,6 +11,7 @@ import Our_Process from "@/components/Our_Process";
 import ClientFeedback from "@/components/ClientFeedback";
 import OurPatners from "@/components/OurPatners";
 import TechnologyTabs from "@/components/TechnologyTabs";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
     <ClientFeedback/>
     <OurPatners/>
     <TechnologyTabs/>
+    <Footer/>
     {/* <VideoSlider/> */}
 
 

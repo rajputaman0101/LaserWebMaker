@@ -227,3 +227,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: 12px;
   width: 12px;
 }
+
+.bg_footer{
+   background-image: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.849));
+}

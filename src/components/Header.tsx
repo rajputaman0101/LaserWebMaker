@@ -95,12 +95,13 @@ export default function Header() {
 
               {isClient && (
                 <div
-                  className={`absolute left-0 top-12 bg-white border border-gray-200 rounded-md shadow-lg z-20 
-                    transition-all duration-500 ease-in-out 
-                    ${isSubMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-1"}
-                    w-[260px] p-3 space-y-2`}
-                  onMouseLeave={() => setIsSubMenuOpen(false)}
-                >
+    className={`fixed left-0 top-[100%] bg-white border border-gray-200 shadow-lg z-50
+      transition-all duration-300 ease-in-out
+      ${isSubMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-1"}
+      w-screen px-35 py-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4
+    `}
+    onMouseLeave={() => setIsSubMenuOpen(false)}
+  >
                 <Link
                   href="/services/web"
                   className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded transition-all"
