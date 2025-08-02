@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-// import { Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 export default function Home() {
   return (
@@ -28,29 +28,28 @@ export default function Home() {
                   Trusted by 5,000+ Clients Worldwide ( 4.9 rating
                 </p>
 
-                <div className="flex items-end gap-1 pb-[2px] z-10 font-semibold">
-  {[
-    "/images/icons/star.png",
-    "/images/icons/star.png",
-    "/images/icons/star.png",
-    "/images/icons/star.png",
-    "/images/icons/half_star.png",
-  ].map((src, index) => (
-    <div
-      key={index}
-      className="relative w-[4.96px] h-[4.66px] md:w-[10px] md:h-[10px]"
-    >
-      <Image
-        src={src}
-        alt="Star icon"
-        fill
-        className="object-contain"
-        priority
-      />
-    </div>
+            <div className="flex items-end gap-1 pb-[2px] z-10 font-semibold text-[#FFC107]">
+  {/* 4 full yellow stars */}
+  {[...Array(4)].map((_, index) => (
+    <Star key={index} size={9.24} className=" fill-[#FFC107]" />
   ))}
-</div>
 
+  {/* Half star: left yellow, right white */}
+  <div className="relative w-[14px] h-[14px] md:w-[9.24px] md:h-[8.73px]">
+    {/* Left half - yellow */}
+    <Star
+      size={9.24}
+      className="absolute top-0 left-0 fill-[#FFC107] text-[#FFC107]"
+      style={{ clipPath: "inset(0 50% 0 0)" }}
+    />
+    {/* Right half - white */}
+    <Star
+      size={9.24}
+      className="absolute top-0 left-0 fill-white text-white"
+      style={{ clipPath: "inset(0 0 0 50%)" }}
+    />
+  </div>
+</div>
 
                 <p className="text-black text-sm z-10 font-semibold">)</p>
               </div>
