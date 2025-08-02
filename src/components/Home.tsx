@@ -1,7 +1,22 @@
 import React from "react";
 import Image from "next/image";
 import { Star } from "lucide-react";
-
+const HalfStar = () => (
+  <svg
+    viewBox="0 0 24 24"
+    className="w-full h-full"
+    fill="url(#half)"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id="half">
+        <stop offset="50%" stopColor="#FFC107" />
+        <stop offset="50%" stopColor="white" />
+      </linearGradient>
+    </defs>
+    <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.782 1.401 8.169L12 18.896l-7.335 3.865 1.401-8.169L.132 9.21l8.2-1.192z" />
+  </svg>
+);
 export default function Home() {
   return (
     <>
@@ -28,26 +43,21 @@ export default function Home() {
                   Trusted by 5,000+ Clients Worldwide ( 4.9 rating
                 </p>
 
-            <div className="flex items-end gap-1 pb-[2px] z-10 font-semibold text-[#FFC107]">
+          <div className="flex items-end gap-1 pb-[3px] z-10 font-semibold text-[#FFC107]">
   {/* 4 full yellow stars */}
   {[...Array(4)].map((_, index) => (
-    <Star key={index} size={9.24} className=" fill-[#FFC107]" />
+    <Star key={index} size={9} className="fill-[#FFC107]" />
   ))}
 
-  {/* Half star: left yellow, right white */}
-  <div className="relative w-[14px] h-[14px] md:w-[9.24px] md:h-[8.73px]">
-    {/* Left half - yellow */}
-    <Star
-      size={9.24}
-      className="absolute top-0 left-0 fill-[#FFC107] text-[#FFC107]"
-      style={{ clipPath: "inset(0 50% 0 0)" }}
-    />
-    {/* Right half - white */}
-    <Star
-      size={9.24}
-      className="absolute top-0 left-0 fill-white text-white"
-      style={{ clipPath: "inset(0 0 0 50%)" }}
-    />
+  {/* Half star using clipped overlay */}
+  <div className="relative w-[4.94px] h-[8.66px] md:w-[9.24px] md:h-[8.73px]">
+    {/* Base white star */}
+    <Star size={9} className="fill-white text-white" />
+
+    {/* Overlay left half yellow star */}
+    <div className="absolute top-0 left-0 md:w-1/2 w-2/2 h-full overflow-hidden">
+      <Star size={9} className="fill-[#FFC107] text-[#FFC107]" />
+    </div>
   </div>
 </div>
 
