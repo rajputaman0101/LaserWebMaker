@@ -1,98 +1,170 @@
-import React from 'react'
+"use client";
+import React from "react";
+import { useRef, useEffect, useState } from "react";
+
+import Image from "next/image";
+
+const faqs = [
+  {
+    question: "Inception",
+    answer:
+      "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr. Bу dоіng a lіttlе bіt оf rеѕеаrсh, you саn еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr.",
+    image: "/images/services-img/designing-service.png",
+
+    icon: "inception",
+  },
+  {
+    question: "Contract",
+    answer:
+      "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr. Bу dоіng a lіttlе bіt оf rеѕеаrсh, you саn еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr.",
+
+    image: "/images/services-img/website-development.png",
+    icon: "contract",
+  },
+  {
+    question: "Build",
+    answer:
+      "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr. Bу dоіng a lіttlе bіt оf rеѕеаrсh, you саn еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr.",
+    image: "/images/services-img/ecommerce-website.png",
+    icon: "build",
+  },
+  {
+    question: "UAT + Launch",
+    answer:
+      "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr. Bу dоіng a lіttlе bіt оf rеѕеаrсh, you саn еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr.",
+    image: "/images/services-img/hire-developer.png",
+    icon: "launch",
+  },
+];
 
 export default function Our_Process() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const toggle = (idx: number) => {
+    setOpenIndex(openIndex === idx ? null : idx);
+  };
   return (
-   <div className='bg-[#F6F8FB]'>
-     <div className='container-width mx-auto  px-[15px] md:px-15 py-10 '>
+    <div className="bg-[#F6F8FB]">
+      <div className="container-width mx-auto  px-[15px] md:px-15 py-10 ">
+        <div className="process-heading flex flex-col gap-10">
+          <div className="flex flex-col md:flex-row justify-between gap-9 md:gap-12 items-start">
+            <div className="w-full md:w-1/2">
+              <h2 className="text-black text-[32px] md:text-[48px] leading-[120%] font-normal ">
+                Website Development Process
+              </h2>
+            </div>
+            <div className="w-full  md:w-[36%]">
+              <p className="text-[#AEAEAE] text-[16px] leading-[150%] font-normal ">
+                We have highly professional team, which works systematically.
+                Our expert team follows the steps to ensure deliver an error
+                free website.
+              </p>
+            </div>
+          </div>
 
-    <div className="process-heading flex flex-col gap-10">
-      <div className="flex flex-col md:flex-row justify-between gap-9 md:gap-12 items-start">
-        <div className="w-full md:w-1/2">
-          <h2 className='text-black text-[32px] md:text-[48px] leading-[120%] font-normal '>Website Development Process</h2>
-        </div>
-        <div className="w-full  md:w-[36%]">
-          <p className='text-[#AEAEAE] text-[16px] leading-[150%] font-normal '>We have highly professional team, which works systematically. Our expert team follows the steps to ensure deliver an error free website.</p>
+          <div className="outer-process-step bg-white p-5 w-full">
+            <div className="flex flex-col w-full gap-[30px]">
+              {faqs.map((faq, idx) => {
+                const isOpen = openIndex === idx;
+                const isLast = idx === faqs.length - 1; // ✅ Define this inside the map
+                const contentRef = useRef<HTMLDivElement>(null);
+                const [height, setHeight] = useState("0px");
+
+                useEffect(() => {
+                  if (isOpen && contentRef.current) {
+                    setHeight(`${contentRef.current.scrollHeight}px`);
+                  } else {
+                    setHeight("0px");
+                  }
+                }, [isOpen]);
+
+                return (
+                  <div
+                    key={idx}
+                    className="md:flex w-full items-start gap-3 relative"
+                  >
+                    {/* Timeline for each FAQ */}
+                    <div className="hidden md:flex flex-col items-center pt-1 relative min-w-[10px] ">
+                      {/* Step number */}
+                      <div
+                        className={`w-[32px] h-[32px] rounded-full flex items-center justify-center text-sm font-bold z-10
+              ${isOpen ? "bg-[#589CD5] text-white" : "bg-gray-300 text-black"}`}
+                      >
+                        {idx + 1}
+                      </div>
+
+                      {/* Line connecting to next */}
+                      {/* Vertical Line / Connector */}
+                      {!isLast && (
+                        <div
+                          className={`w-[2px] transition-all duration-500 ease-in-out
+      ${
+        openIndex !== null && idx === openIndex
+          ? "bg-[#589CD5] h-[100px]" // highlighted when this is open
+          : openIndex !== null && idx < openIndex
+            ? "bg-[#589CD5] h-[50px]" // already visited
+            : "bg-gray-300 h-[30px]" // upcoming
+      }
+    `}
+                        />
+                      )}
+                    </div>
+
+                    {/* FAQ content */}
+                    <div className="flex-1 transition-all duration-500 bg-[#F6F8FB] rounded-xl p-5">
+                      <button
+                        aria-expanded={isOpen}
+                        onClick={() => toggle(idx)}
+                        className="w-full text-left flex justify-between items-center"
+                      >
+                        <span className="text-[18px] md:text-[24px] font-normal text-black leading-[120%]">
+                          {faq.question}
+                        </span>
+                        <span className="text-xl flex items-center cursor-pointer">
+                          <Image
+                            src={`/images/icons/${faq.icon || "chevron-down"}.svg`}
+                            alt="Toggle"
+                            width={32}
+                            height={32}
+                            className={`transition-all duration-300
+      ${isOpen ? "filter-blue" : "opacity-10 brightness-0"}
+    `}
+                          />
+                        </span>
+                      </button>
+
+                      {/* FAQ answer */}
+                      <div
+                        ref={contentRef}
+                        style={{
+                          height: height,
+                          overflow: "hidden",
+                          transition: "height 0.4s ease",
+                        }}
+                      >
+                        <div className="pt-4">
+                          <p className="text-[16px] font-normal text-[#AEAEAE] leading-[150%]">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="flex justify-center ">
+            <a
+              href="/serving-industries"
+              className=" px-[16px] py-3 w-full md:w-[346px] text-white text-[16px] md:text-[20px] border rounded leading-[26px] bg-[#5E9ED5]   hover:bg-transparent hover:text-[#5E9ED5] hover:border-[#5E9ED5] transition-all duration-500 font-semibold text-center"
+            >
+              Get Service
+            </a>
+          </div>
         </div>
       </div>
-
-
-   <div className="outer-process-step bg-white p-5 w-full">
-  <div className="flex flex-col md:flex-row flex-wrap gap-[30px] md:pl-[30px] ">
-
-    {/* Inception - slightly bigger */}
-    <div className='w-full md:max-w-[42%]'>
-    <div className=" bg-gray-100 p-5 rounded-xl ">
-      <div className="flex flex-col gap-4">
-        <h4 className="text-[20px] md:text-[24px] font-normal text-black leading-[120%]">Inception</h4>
-        <div className="h-[238px] rounded-xl overflow-hidden">
-          <img src="/images/home_img/our-process/inception-img.jpg" alt="Inception" className="w-full h-full object-cover" />
-        </div>
-      </div>
     </div>
-    </div>
-    
-
-    {/* Contract - slightly smaller */}
-    <div className=' md:pl-[30px] w-full md:max-w-[55.5%] '>
-
-      <div className=" bg-gray-100 p-5  rounded-xl  ">
-      <div className="flex flex-col gap-4">
-        <h4 className="text-[20px] md:text-[24px] font-normal text-black leading-[120%]">Contract</h4>
-        <div className="h-[238px] rounded-xl overflow-hidden">
-          <img src="/images/home_img/our-process/contract-img.jpg" alt="Contract" className="w-full h-full object-cover" />
-        </div>
-      </div>
-    </div>
-    </div>
-
-    {/* Build - large */}
-    <div className=' w-full md:max-w-[48%] md:pr-[10px]'>
-    <div className="bg-gray-100 p-5 rounded-xl">
-      <div className="flex flex-col gap-4">
-        <div className='flex justify-between items-center flex-wrap gap-3'>
-          <h4 className="text-[20px] md:text-[24px] font-normal text-black leading-[120%]">Build</h4>
-        <div className="flex flex-wrap gap-[10px]">
-          
-          <span className="px-3 py-[6px] text-[#589CD5] text-[12px] leading-[150%] border border-[#589CD5] hover:bg-[#589CD5] hover:text-white  transition-all inline-block bg-transparent  rounded-full">Prototype/Creative</span>
-          <span className="px-3 py-[6px] text-[#589CD5] text-[12px] leading-[150%] border border-[#589CD5] hover:bg-[#589CD5] hover:text-white  transition-all inline-block bg-transparent  rounded-full">Quality Assurance</span>
-          <span className="px-3 py-[6px] text-[#589CD5] text-[12px] leading-[150%] border border-[#589CD5] hover:bg-[#589CD5] hover:text-white  transition-all inline-block bg-transparent  rounded-full">Development</span>
-        </div>
-        </div>
-        <div className="h-[238px] rounded-xl overflow-hidden">
-          <img src="/images/home_img/our-process/build-img.jpg" alt="Build" className="w-full h-full object-cover" />
-        </div>
-      </div>
-    </div>
-    </div>
-    
-
-    {/* UAT + Launch - small */}
-    <div className='w-full md:w-[49.5%] md:pl-[10px]'>
-    <div className=" bg-gray-100 p-5 rounded-xl">
-      <div className="flex flex-col gap-4">
-        <h4 className="text-[20px] md:text-[24px] font-normal text-black leading-[120%]">UAT + Launch</h4>
-        <div className="h-[238px] rounded-xl overflow-hidden">
-          <img src="/images/home_img/our-process/launch-img.jpg" alt="Launch" className="w-full h-full object-cover" />
-        </div>
-      </div>
-    </div>
-    </div>
-    
-
-  </div>
-</div>
-
-    <div className="flex justify-center ">
-         <a
-            href="/serving-industries"
-            className=" px-[16px] py-3 w-full md:w-[346px] text-white text-[16px] md:text-[20px] border rounded leading-[26px] bg-[#5E9ED5]   hover:bg-transparent hover:text-[#5E9ED5] hover:border-[#5E9ED5] transition-all duration-500 font-semibold text-center"
-          >
-            Get Service
-          </a>
-    </div>
-    </div>
-
-    </div>
-   </div>
-  )
+  );
 }

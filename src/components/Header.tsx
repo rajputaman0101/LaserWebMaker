@@ -93,59 +93,86 @@ export default function Header() {
                 />
               </button>
 
-              {isClient && (
-                <div
-    className={`fixed left-0 top-[100%] bg-white border border-gray-200 shadow-lg z-50
-      transition-all duration-300 ease-in-out
-      ${isSubMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-1"}
-      w-screen px-35 py-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4
-    `}
-    onMouseLeave={() => setIsSubMenuOpen(false)}
-  >
-                <Link
-                  href="/services/web"
-                  className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded transition-all"
-                  onClick={() => setIsSubMenuOpen(false)}
-                >
-                  Web Development
-                </Link>
-                <Link
-                  href="/services/seo"
-                  className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded transition-all"
-                  onClick={() => setIsSubMenuOpen(false)}
-                >
-                  SEO Services
-                </Link>
-                <Link
-                  href="/services/design"
-                  className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded transition-all"
-                  onClick={() => setIsSubMenuOpen(false)}
-                >
-                  Graphic Design
-                </Link>
-                <Link
-                  href="/services/app"
-                  className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded transition-all"
-                  onClick={() => setIsSubMenuOpen(false)}
-                >
-                  App Development
-                </Link>
-                <Link
-                  href="/services/marketing"
-                  className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded transition-all"
-                  onClick={() => setIsSubMenuOpen(false)}
-                >
-                  Digital Marketing
-                </Link>
-                <Link
-                  href="/services/content"
-                  className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded transition-all"
-                  onClick={() => setIsSubMenuOpen(false)}
-                >
-                  Content Writing
-                </Link>
-              </div>
-                )}
+           {isClient && (
+  <div className="fixed top-[100%] left-0 w-full z-50">
+    <div
+      className={`
+        mx-auto  max-w-[1320px] bg-white border border-gray-200 shadow-lg
+        transition-all duration-300 ease-in-out
+        ${isSubMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-1"}
+        px py-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4
+      `}
+      onMouseLeave={() => setIsSubMenuOpen(false)}
+    >
+      {/* Your links here */}
+      <Link
+        href="/services/web"
+        className="block px-3 py-2 mx-auto items-center text-gray-800 hover:bg-gray-100 rounded transition-all"
+        onClick={() => setIsSubMenuOpen(false)}
+      >
+        Web Development
+      </Link>
+      <Link
+        href="/services/seo"
+        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
+        onClick={() => setIsSubMenuOpen(false)}
+      >
+        SEO Services
+      </Link>
+      <Link
+        href="/services/design"
+        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
+        onClick={() => setIsSubMenuOpen(false)}
+      >
+        Graphic Design
+      </Link>
+      <Link
+        href="/services/app"
+        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
+        onClick={() => setIsSubMenuOpen(false)}
+      >
+        App Development
+      </Link>
+      <Link
+        href="/services/marketing"
+        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
+        onClick={() => setIsSubMenuOpen(false)}
+      >
+        Digital Marketing
+      </Link>
+      <Link
+        href="/services/content"
+        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
+        onClick={() => setIsSubMenuOpen(false)}
+      >
+        Content Writing
+      </Link>
+      <Link
+        href="/services/content"
+        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
+        onClick={() => setIsSubMenuOpen(false)}
+      >
+        Content Writing
+      </Link>
+      <Link
+        href="/services/content"
+        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
+        onClick={() => setIsSubMenuOpen(false)}
+      >
+        Content Writing
+      </Link>
+      <Link
+        href="/services/content"
+        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
+        onClick={() => setIsSubMenuOpen(false)}
+      >
+        Content Writing
+      </Link>
+    </div>
+  </div>
+)}
+
+
             </div>
                 
 

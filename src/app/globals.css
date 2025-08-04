@@ -231,3 +231,9 @@ body::-webkit-scrollbar-thumb:hover {
 .bg_footer{
    background-image: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.849));
 }
+
+
+
+.filter-blue {
+  filter: invert(66%) sepia(24%) saturate(493%) hue-rotate(174deg) brightness(91%) contrast(88%);
+}

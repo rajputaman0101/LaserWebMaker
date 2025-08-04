@@ -53,6 +53,7 @@ export default function Services_faqs() {
               Services
             </h2>
           </div>
+          
           <div className="gap-[16px] grid grid-flow-row ">
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;

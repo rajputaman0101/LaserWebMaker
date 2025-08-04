@@ -43,25 +43,30 @@ export default function Home() {
                   Trusted by 5,000+ Clients Worldwide ( 4.9 rating
                 </p>
 
-          <div className="flex items-end gap-1 pb-[3px] z-10 font-semibold text-[#FFC107]">
-  {/* 4 full yellow stars */}
-  {[...Array(4)].map((_, index) => (
-    <Star key={index} size={9} className="fill-[#FFC107]" />
-  ))}
+                <div className="flex items-end gap-1 text-[7.48px] pb-2 md:pb-1 z-10 font-semibold md:text-sm text-[#FFC107] ">
+                  {/* 4 full yellow stars */}
+                  {[...Array(4)].map((_, index) => (
+                    <Star key={index} size={9} className="fill-[#FFC107]" />
+                  ))}
 
-  {/* Half star using clipped overlay */}
-  <div className="relative w-[4.94px] h-[8.66px] md:w-[9.24px] md:h-[8.73px]">
-    {/* Base white star */}
-    <Star size={9} className="fill-white text-white" />
+                  {/* Half star using clipped overlay */}
+                  <div className="relative w-[4.94px] h-[8.66px] md:w-[9.24px] md:h-[8.73px]">
+                    {/* Base white star */}
+                    <Star size={9} className="fill-white text-white" />
 
-    {/* Overlay left half yellow star */}
-    <div className="absolute top-0 left-0 md:w-1/2 w-2/2 h-full overflow-hidden">
-      <Star size={9} className="fill-[#FFC107] text-[#FFC107]" />
-    </div>
-  </div>
-</div>
+                    {/* Overlay left half yellow star */}
+                    <div className="absolute top-0 left-0 md:w-1/2 w-2/2 h-full overflow-hidden">
+                      <Star
+                        size={9}
+                        className="fill-[#FFC107] text-[#FFC107]"
+                      />
+                    </div>
+                  </div>
+                </div>
 
-                <p className="text-black text-sm z-10 font-semibold">)</p>
+                <p className="text-black md:text-sm text-[7.48px] z-10 font-semibold ">
+                  )
+                </p>
               </div>
               <div className=" flex items-end gap-2 py-5">
                 <hr className="w-full border-t border-[#111111] opacity-10" />
@@ -168,26 +173,26 @@ export default function Home() {
             priority
           />
           {/* Text Overlay */}
-          <div className="absolute top-2 md:top-auto md:bottom-0 left-0 md:left-[12] right-0 px-[15px] md:px-12 p-10">
-            <p className="text-sm text-white/75 font-thin mb-2 leading-[18px] md:text-xl md:leading-[26px]">
+          <div className=" absolute top-1 md:top-auto md:bottom-0 left-0 md:left-[12] right-0 px-[15px] md:px-12 p-10">
+            <p className="text-sm text-white/75 font-normal mb-2 leading-[18px] md:text-xl md:leading-[26px]">
               Recognized as the Most Trusted
             </p>
 
-            <div className="inline-flex items-center mb-2">
+            <div className="inline-flex items-center mb-0">
               <h2 className="text-white text-[28px] sm:text-4xl md:text-5xl pt-2 leading-[135%] md:leading-[120%] font-normal">
                 Web
               </h2>
               <span className="ml-2 rounded-full bg-white/10">
-                <h2 className="text-white md:text-5xl px-4 pt-2 pb-1 italic text-[28px] leading-[100%] md:leading-[100%]  font-medium">
+                <h2 className="text-white md:text-5xl px-4 pt-1 pb-1   italic text-[28px] leading-[100%] md:leading-[100%]  font-medium">
                   Development
                 </h2>
               </span>
             </div>
-            <h2 className="text-white text-5xl font-normal leading-[135%] md:leading[120%] ">
+            <h2 className="text-white text-5xl mb-2 font-normal leading-[135%] md:leading[120%] ">
               Company
             </h2>
             {/* hover:scale-105 transition */}
-            <div className="w-148px h-44px md:w-[168px] md:h-[50px] p-2 btn-contact group text-2xl inline-flex items-center justify-center gap-[10px] mt-3 md:mt-9 rounded-sm bg-gradient-to-t from-white via-white to-white text-[#057BC1]  w-max font-red-hat">
+            <div className="w-148px h-44px md:w-[168px] md:h-[50px] px-2 btn-contact group text-2xl inline-flex items-center justify-center gap-[10px] mt-3 md:mt-5 rounded-sm bg-gradient-to-t from-white via-white to-white text-[#057BC1]  w-max font-red-hat">
               <span className="md:text-xl text-[16px] font-semibold leading-[26px]">
                 Contact Us
               </span>
@@ -214,7 +219,7 @@ export default function Home() {
           <div className="lines items-start  ">
                 
           
-          <div  className="first-location inline-grid gap-[14px] h-[110px] w-[295px] md:w-[370px] xl:w-[295px]"
+          <div  className="first-location inline-grid gap-[14px] h-[110px] max-w-[295px] md:max-w-[370px] xl:max-w-[295px]"
 
 >
 
@@ -250,7 +255,7 @@ export default function Home() {
           <div className="lines items-start  ">
                 
           
-          <div className="first-location inline-grid gap-[14px] h-[110px] w-[295px] md:w-[370px] xl:w-[295px]"
+          <div className="first-location inline-grid gap-[14px] h-[110px] max-w-[295px] md:max-w-[370px] xl:max-w-[295px]"
 >
 
           
@@ -285,7 +290,7 @@ export default function Home() {
           <div className="lines items-start  ">
                 
           
-          <div className="first-location inline-grid gap-[14px] h-[110px] w-[295px] md:w-[370px] xl:w-[295px]"
+          <div className="first-location inline-grid gap-[14px] h-[110px] max-w-[295px] md:max-w-[370px] xl:max-w-[295px]"
 >
 
           
@@ -316,11 +321,11 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div className=" container-width mx-auto inner-location-section flex flex-col lg:flex-row md:gap-30 gap-[16px]">
+        <div className=" container-width mx-auto inner-location-section flex flex-col lg:flex-row md:gap-[222px] gap-[16px]">
           {/* First Location */}
           <div className=" flex">
             <div className="border-l border-white/10 bg-[#5098D6]/50 rounded-[3px] h-auto mr-[30px]"></div>
-            <div className="first-location inline-grid gap-[14px] h-[110px] w-[295px] md:w-[370px] xl:w-[295px]">
+            <div className="first-location inline-grid gap-[14px] h-[110px] max-w-[295px] md:max-w-[370px] xl:max-w-[295px]">
               <div>
                 <Image
                   src="/images/icons/twemoji_flag-india.svg"
@@ -333,13 +338,13 @@ export default function Home() {
               <div className="contact-details inline-grid gap-1">
                 <h4 className="text-white leading-[150%] font-medium">India</h4>
                 <div className="gap-[6px] flex">
-                  <p className="text-[12px] leading-[150%] font-light text-white">
+                  <p className="text-[12px] leading-[150%] font-light text-white/75">
                     +91-1203202969
                   </p>
-                  <p className="text-[12px] leading-[150%] font-light text-white">
+                  <p className="text-[12px] leading-[150%] font-light text-white/75">
                     ,
                   </p>
-                  <p className="text-[12px] leading-[150%] font-light text-white">
+                  <p className="text-[12px] leading-[150%] font-light text-white/75">
                     7291934043
                   </p>
                 </div>
@@ -350,7 +355,7 @@ export default function Home() {
           {/* Repeat the same pattern for other locations */}
           <div className="flex">
             <div className="border-l border-white/10 bg-[#5098D6]/50 rounded-[3px]  h-auto mr-[30px]"></div>
-            <div className="first-location inline-grid gap-[14px] h-[110px] w-[295px] md:w-[370px] xl:w-[295px] ">
+            <div className="first-location inline-grid gap-[14px] h-[110px] max-w-[295px] md:max-w-[370px] xl:max-w-[295px] ">
               <div>
                 <Image
                   src="/images/icons/twemoji_flag-malaysia.svg"
@@ -364,14 +369,14 @@ export default function Home() {
                 <h4 className="text-white leading-[150%] font-medium">
                   Malaysia
                 </h4>
-                  <div className="gap-[6px] flex">
-                  <p className="text-[12px] leading-[150%] font-light text-white">
+                <div className="gap-[6px] flex">
+                  <p className="text-[12px] leading-[150%] font-light text-white/75">
                     +91-1203202969
                   </p>
-                  <p className="text-[12px] leading-[150%] font-light text-white">
+                  <p className="text-[12px] leading-[150%] font-light text-white/75">
                     ,
                   </p>
-                  <p className="text-[12px] leading-[150%] font-light text-white">
+                  <p className="text-[12px] leading-[150%] font-light text-white/75">
                     7291934043
                   </p>
                 </div>
@@ -381,7 +386,7 @@ export default function Home() {
 
           <div className="flex">
             <div className="border-l border-white/10 bg-[#5098D6]/50 rounded-[3px]  h-auto mr-[30px]"></div>
-            <div className="first-location inline-grid gap-[14px] h-[110px] w-[295px] md:w-[370px] xl:w-[295px]">
+            <div className="first-location inline-grid gap-[14px] h-[110px]  max-w-[295px] md:max-w-[370px] xl:max-w-[295px]">
               <div>
                 <Image
                   src="/images/icons/emojione-v1_flag-for-saudi-arabia.svg"
@@ -395,14 +400,14 @@ export default function Home() {
                 <h4 className="text-white leading-[150%] font-medium">
                   Saudi Arabia
                 </h4>
-                  <div className="gap-[6px] flex">
-                  <p className="text-[12px] leading-[150%] font-light text-white">
+                <div className="gap-[6px] flex">
+                  <p className="text-[12px] leading-[150%] font-light text-white/75">
                     +91-1203202969
                   </p>
-                  <p className="text-[12px] leading-[150%] font-light text-white">
+                  <p className="text-[12px] leading-[150%] font-light text-white/75">
                     ,
                   </p>
-                  <p className="text-[12px] leading-[150%] font-light text-white">
+                  <p className="text-[12px] leading-[150%] font-light text-white/75">
                     7291934043
                   </p>
                 </div>
@@ -414,7 +419,6 @@ export default function Home() {
 
       {/* new section end  */}
       {/* about us section start */}
-      
     </>
   );
 }
