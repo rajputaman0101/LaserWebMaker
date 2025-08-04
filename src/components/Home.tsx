@@ -410,6 +410,7 @@ export default function Home() {
                   <p className="text-[12px] leading-[150%] font-light text-white/75">
                     7291934043
                   </p>
+                      
                 </div>
               </div>
             </div>
