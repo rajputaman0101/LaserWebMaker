@@ -236,7 +236,7 @@ export default function Home() {
 
       {/* section second */}
 
-      <div className=" location-section bg-black px-15 py-20">
+      <div className=" location-section bg-black px-15 py-10">
         {/* <div className="inner-location-section md:flex gap-[30px]">
           <div className="lines items-start  border-l border-white/10 bg-[#5098D6]/50 rounded-[3px]">
             

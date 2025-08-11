@@ -87,7 +87,7 @@ export default function Header() {
             </Link>
             <Link
               href="/about"
-              className="block text-white-80 text-[15px] hover:text-blue-600"
+              className="block text-white-80 hover:text-blue-600"
               onClick={() => setIsOpen(false)}
             >
               Company Overview
@@ -220,19 +220,11 @@ export default function Header() {
                         </li>
                       </ul>
 
-                         <a
+                       <a
             href="/contact-us"
-            className="text-center mt-4 inline-flex text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
+            className="text-center mt-4 inline-block text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
           >
            View All
-           {/* <Image
-                           src="/images/icons/arrow-up-right.png"
-                           alt="Arrow Icon"
-                           width={20}
-                           height={20}
-                           priority
-                           className="ml-4 transform transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2"
-                         /> */}
           </a>
                     </div>
 
@@ -430,7 +422,7 @@ export default function Header() {
             href="/contact-us"
             className="text-center mt-4 inline-block text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
           >
-          View All
+           View All
           </a>
                     </div>
                     {/* Column 4 */}
@@ -514,17 +506,17 @@ export default function Header() {
 
             <Link
               href="/portfolio"
-              className="text-white-80 text-[15px] hover:text-blue-600"
+              className="text-white-80 hover:text-blue-600"
             >
               Portfolio
             </Link>
             <Link
               href="/packages"
-              className="text-white-80 text-[15px] hover:text-blue-600"
+              className="text-white-80 hover:text-blue-600"
             >
               Packages
             </Link>
-            <Link href="/blogs" className="text-white-80 text-[15px] hover:text-blue-600">
+            <Link href="/blogs" className="text-white-80 hover:text-blue-600">
               Blogs
             </Link>
           </nav>
@@ -532,10 +524,10 @@ export default function Header() {
 
         {/* Right Side: Button */}
         <div className="hidden md:block space-x-[30px] items-center">
-          <Link href="/join" className="text-white-80 text-[15px] hover:text-blue-600">
+          <Link href="/join" className="text-white-80 hover:text-blue-600">
             Join
           </Link>
-          <Link href="/contact" className="text-white-80 text-[15px] hover:text-blue-600">
+          <Link href="/contact" className="text-white-80 hover:text-blue-600">
             Contact
           </Link>
 
@@ -560,14 +552,14 @@ export default function Header() {
         <div className="md:hidden px-4 pb-4 space-y-2">
           <Link
             href="/"
-            className="block text-white-80 text-[15px] hover:text-blue-600"
+            className="block text-white-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="block text-white-80 text-[15px] hover:text-blue-600"
+            className="block text-white-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Company Overview
@@ -628,35 +620,35 @@ export default function Header() {
 
           <Link
             href="/portfolio"
-            className="block text-white-80 text-[15px] hover:text-blue-600"
+            className="block text-white-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Portfolio
           </Link>
           <Link
             href="/packages"
-            className="block text-white-80 text-[15px] hover:text-blue-600"
+            className="block text-white-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Packages
           </Link>
           <Link
             href="/blogs"
-            className="block text-white-80 text-[15px] hover:text-blue-600"
+            className="block text-white-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Blogs
           </Link>
           <Link
             href="/join"
-            className="block text-white-80 text-[15px] hover:text-blue-600"
+            className="block text-white-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Join
           </Link>
           <Link
             href="/contact"
-            className="block text-white-80 text-[15px] hover:text-blue-600"
+            className="block text-white-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Contact
