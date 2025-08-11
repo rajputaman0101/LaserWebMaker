@@ -23,16 +23,17 @@ export default function Home() {
       <div className=" container-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-0">
         {/* First Image with Text */}
         <div className="relative w-full h-[400px] md:h-[820px] ">
+        
           <Image
-            src="/images/home_img/banner_1img.jpg"
+            src="/images/home_img/banner_1img-min.jpg"
             alt="Banner Image 1"
             fill
             className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            
             priority
           />
           {/* Text Overlay */}
-          <div className=" absolute bottom-3 left-0 right-0  px-[15px] md:px-[32px]  pb-4 ">
+          <div className=" absolute bottom-3 left-0 right-0  px-[15px] md:px-[60px]  pb-4 ">
             <div
               className="p-5 relative bg-white/10 backdrop-blur-[5px] rounded-lg overflow-hidden
              before:absolute before:inset-0 before:rounded-lg before:border before:border-[#C7C7C7]/20 
@@ -40,10 +41,13 @@ export default function Home() {
             >
               <div className="  flex items-end gap-2 ">
                 <p className="text-black  z-10 md:text-sm text-[7.48px] font-semibold">
-                  Trusted by 5,000+ Clients Worldwide ( 4.9 rating
+                  Trusted by 5,000+ Clients Worldwide 
+                </p>
+                 <p className="text-black md:text-sm text-[7.48px] z-10 font-normal ">
+                 ( 4.9 rating
                 </p>
 
-                <div className="flex items-end gap-1 text-[7.48px] pb-2 md:pb-1 z-10 font-semibold md:text-sm text-[#FFC107] ">
+                <div className="flex items-end gap-1 text-[7.48px] pb-2 md:pb-1 z-10 font-normal md:text-sm text-[#FFC107] ">
                   {/* 4 full yellow stars */}
                   {[...Array(4)].map((_, index) => (
                     <Star key={index} size={9} className="fill-[#FFC107]" />
@@ -64,7 +68,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <p className="text-black md:text-sm text-[7.48px] z-10 font-semibold ">
+                <p className="text-black md:text-sm text-[7.48px] z-10 font-normal ">
                   )
                 </p>
               </div>
@@ -120,7 +124,7 @@ export default function Home() {
 
                 <span>
                   <Image
-                    src="/images/icons/trustpilpt.png"
+                    src="/images/icons/trustpilpt.svg"
                     alt="Arrow Icon"
                     width={138}
                     height={37}
@@ -129,7 +133,7 @@ export default function Home() {
                 </span>
                 <span>
                   <Image
-                    src="/images/icons/clutch.png"
+                    src="/images/icons/clutch.svg"
                     alt="Arrow Icon"
                     width={112}
                     height={37}
@@ -138,7 +142,7 @@ export default function Home() {
                 </span>
                 <span>
                   <Image
-                    src="/images/icons/goodfirms.png"
+                    src="/images/icons/goodfirms.svg"
                     alt="Arrow Icon"
                     width={162}
                     height={36}
@@ -151,19 +155,40 @@ export default function Home() {
         </div>
 
         {/* Second Image with Text */}
-        <div className="relative w-full h-[274px] md:h-[820px] ">
+        <div className="relative w-full h-[274px] md:h-[820px] " style={{
+    background: 'linear-gradient(-11deg, #4D97D5 0%, #64A1D5 100%)',
+  }}>
           {/* Mobile Image */}
 
-          <Image
-            src="/images/home_img/mobile_mode_banner21.png"
+            {/* mobile image */}
+           <Image
+            src="/images/home_img/mobile-m-logo.png"
             alt="Mobile Banner"
-            fill
-            className="object-cover block md:hidden "
+             width={90} // Set appropriate width
+    height={10} // Set appropriate height
+            className="absolute top-0 right-0 z-10  object-contain block md:hidden "
             //  sizes="(max-width: 768px) 100vw, 50vw"
             priority
           />
 
-          {/* Desktop / Tablet Image */}
+ <Image
+    src="/images/home_img/m-logo.svg"
+    alt="Mobile Banner"
+    width={312} // Set appropriate width
+    height={100} // Set appropriate height
+    className="absolute top-0 right-0 z-10 object-contain hidden md:block md:w-[312px] md:h-[100%] "
+    priority
+  />
+
+          {/* <Image
+            src="/images/home_img/mobile_mode_banner21.png"
+            alt="Mobile Banner"
+            fill
+            className="object-cover block md:hidden "
+          
+            priority
+          />
+
           <Image
             src="/images/home_img/banner_2img.jpg"
             alt="Desktop Banner"
@@ -171,24 +196,24 @@ export default function Home() {
             className="object-cover hidden md:block"
             sizes="(max-width: 768px) 100vw, 50vw"
             priority
-          />
+          /> */}
           {/* Text Overlay */}
-          <div className=" absolute top-1 md:top-auto md:bottom-0 left-0 md:left-[12] right-0 px-[15px] md:px-12 p-10">
-            <p className="text-sm text-white/75 font-normal mb-2 leading-[18px] md:text-xl md:leading-[26px]">
+          <div className=" absolute top-1 md:top-auto md:bottom-0  left-0 md:left-[12] right-0 px-[15px] md:px-12 p-10">
+            <p className="text-sm font-thin  text-white/75  mb-2 leading-[18px] md:text-xl md:leading-[26px]">
               Recognized as the Most Trusted
             </p>
 
-            <div className="inline-flex items-center mb-0">
+            <div className="inline-flex items-center mb-0 flex-wrap">
               <h2 className="text-white text-[28px] sm:text-4xl md:text-5xl pt-2 leading-[135%] md:leading-[120%] font-normal">
                 Web
               </h2>
               <span className="ml-2 rounded-full bg-white/10">
-                <h2 className="text-white md:text-5xl px-4 pt-1 pb-1   italic text-[28px] leading-[100%] md:leading-[100%]  font-medium">
+                <h2 className="text-white md:text-5xl pl-3 pr-5 pt-1 pb-1  italic text-[28px] leading-[100%] md:leading-[100%]  font-medium">
                   Development
                 </h2>
               </span>
             </div>
-            <h2 className="text-white text-5xl mb-2 font-normal leading-[135%] md:leading[120%] ">
+            <h2 className="text-white text-[32px] md:text-5xl mb-2 font-normal leading-[135%] md:leading[120%] ">
               Company
             </h2>
             {/* hover:scale-105 transition */}
@@ -211,7 +236,7 @@ export default function Home() {
 
       {/* section second */}
 
-      <div className=" location-section bg-black px-15 py-10">
+      <div className=" location-section bg-black px-15 py-20">
         {/* <div className="inner-location-section md:flex gap-[30px]">
           <div className="lines items-start  border-l border-white/10 bg-[#5098D6]/50 rounded-[3px]">
             

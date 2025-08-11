@@ -6,7 +6,9 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [isDesktopSubOpen, setIsDesktopSubOpen] = useState(false); // For desktop dropdown
+  const [isMobileSubOpen, setIsMobileSubOpen] = useState(false); // For mobile accordion
+
   const subMenuRef = useRef<HTMLDivElement>(null);
   const [isClient, setIsClient] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
@@ -23,7 +25,7 @@ export default function Header() {
         subMenuRef.current &&
         !subMenuRef.current.contains(event.target as Node)
       ) {
-        setIsSubMenuOpen(false);
+        setIsDesktopSubOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -45,8 +47,16 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  const [servicesButtonOffset, setServicesButtonOffset] = useState(0);
 
- return (
+  useEffect(() => {
+    if (isClient && subMenuRef.current) {
+      const rect = subMenuRef.current.getBoundingClientRect();
+      setServicesButtonOffset(rect.left);
+    }
+  }, [isClient]);
+
+  return (
     <header
       className={`bg-black sticky top-0 z-50 transition-transform duration-500 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
@@ -68,121 +78,453 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-[30px] items-center">
-            <Link href="/" className="block text-white hover:text-blue-600" onClick={() => setIsOpen(false)}>
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="block text-white-80 hover:text-blue-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Company Overview
-          </Link>
+            <Link
+              href="/"
+              className="block text-white hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="block text-white-80 text-[15px] hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Company Overview
+            </Link>
 
             <div className="relative" ref={subMenuRef}>
               <button
                 className="flex items-center text-white hover:text-blue-500 transition-colors duration-200"
-                onMouseEnter={() => isClient && setIsSubMenuOpen(true)}
-                onClick={() => isClient && setIsSubMenuOpen(!isSubMenuOpen)}
+                onMouseEnter={() => isClient && setIsDesktopSubOpen(true)}
+                onClick={() =>
+                  isClient && setIsDesktopSubOpen(!isDesktopSubOpen)
+                }
               >
                 Services
                 <ChevronDown
                   className={`ml-1 h-4 w-4 transition-transform duration-200 ${
-                    isSubMenuOpen ? "rotate-180" : ""
+                    isDesktopSubOpen ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
-           {isClient && (
-  <div className="fixed top-[100%] left-0 w-full z-50">
-    <div
-      className={`
-        mx-auto  max-w-[1320px] bg-white border border-gray-200 shadow-lg
-        transition-all duration-300 ease-in-out
-        ${isSubMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-1"}
-        px py-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4
-      `}
-      onMouseLeave={() => setIsSubMenuOpen(false)}
-    >
-      {/* Your links here */}
-      <Link
-        href="/services/web"
-        className="block px-3 py-2 mx-auto items-center text-gray-800 hover:bg-gray-100 rounded transition-all"
-        onClick={() => setIsSubMenuOpen(false)}
-      >
-        Web Development
-      </Link>
-      <Link
-        href="/services/seo"
-        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
-        onClick={() => setIsSubMenuOpen(false)}
-      >
-        SEO Services
-      </Link>
-      <Link
-        href="/services/design"
-        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
-        onClick={() => setIsSubMenuOpen(false)}
-      >
-        Graphic Design
-      </Link>
-      <Link
-        href="/services/app"
-        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
-        onClick={() => setIsSubMenuOpen(false)}
-      >
-        App Development
-      </Link>
-      <Link
-        href="/services/marketing"
-        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
-        onClick={() => setIsSubMenuOpen(false)}
-      >
-        Digital Marketing
-      </Link>
-      <Link
-        href="/services/content"
-        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
-        onClick={() => setIsSubMenuOpen(false)}
-      >
-        Content Writing
-      </Link>
-      <Link
-        href="/services/content"
-        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
-        onClick={() => setIsSubMenuOpen(false)}
-      >
-        Content Writing
-      </Link>
-      <Link
-        href="/services/content"
-        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
-        onClick={() => setIsSubMenuOpen(false)}
-      >
-        Content Writing
-      </Link>
-      <Link
-        href="/services/content"
-        className="block px-3 py-2  mx-auto text-gray-800 hover:bg-gray-100 rounded transition-all"
-        onClick={() => setIsSubMenuOpen(false)}
-      >
-        Content Writing
-      </Link>
-    </div>
-  </div>
-)}
+              {isClient && (
+                <div
+                  className={`
+    absolute top-full pt-[29px]
+    transition-all duration-300 ease-in-out z-50
+    ${isDesktopSubOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-1"}
+  `}
+                  style={{
+                    left: "0px",
+                    transform: `translateX(calc(-${servicesButtonOffset}px))`,
+                    width: "100vw",
+                    // fixed site width
+                    maxWidth: "1440px", // responsive
+                    overflowX: "hidden",
+                  }}
+                  onMouseLeave={() => setIsDesktopSubOpen(false)}
+                >
+                  <div className="bg-[#fff]  shadow-lg px-[15px] md:px-15 py-6 grid grid-cols-4 gap-8 container-width ">
+                    {/* Column 1 */}
+                    <div>
+                      <h5 className=" font-semibold text-gray-900 mb-4">
+                        Designing Services
+                      </h5>
+                      <ul className="space-y-3">
+                        {/* Item 1 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Website Designing
+                            <span className="text-blue-500 text-xs">New</span>
+                          </Link>
+                        </li>
 
+                        {/* Item 2 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border text-[15px] border-black rounded-xl p-1"
+                            />
+                            Catalog Designing
+                          </Link>
+                        </li>
 
+                        {/* Item 3 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Emailer Designing
+                          </Link>
+                        </li>
+
+                        {/* Item 4 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            PSD To HTML Designing
+                          </Link>
+                        </li>
+
+                        {/* Item 5 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Logo Designing
+                          </Link>
+                        </li>
+                      </ul>
+
+                         <a
+            href="/contact-us"
+            className="text-center mt-4 inline-flex text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
+          >
+           View All
+           {/* <Image
+                           src="/images/icons/arrow-up-right.png"
+                           alt="Arrow Icon"
+                           width={20}
+                           height={20}
+                           priority
+                           className="ml-4 transform transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2"
+                         /> */}
+          </a>
+                    </div>
+
+                    {/* Column 2 */}
+                    <div>
+                      <h5 className="font-semibold text-gray-900 mb-4">
+                        Manage Databases
+                      </h5>
+                      <ul className="space-y-3">
+                        {/* Item 1 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Website Designing
+                            <span className="text-blue-500 text-xs">New</span>
+                          </Link>
+                        </li>
+
+                        {/* Item 2 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border text-[15px] border-black rounded-xl p-1"
+                            />
+                            Catalog Designing
+                          </Link>
+                        </li>
+
+                        {/* Item 3 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Emailer Designing
+                          </Link>
+                        </li>
+
+                        {/* Item 4 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            PSD To HTML Designing
+                          </Link>
+                        </li>
+
+                        {/* Item 5 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Logo Designing
+                          </Link>
+                        </li>
+                      </ul>
+                       <a
+            href="/contact-us"
+            className="text-center mt-4 inline-block text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
+          >
+           View All
+          </a>
+                    </div>
+
+                    {/* Column 3 */}
+                    <div>
+                      <h5 className="font-semibold text-gray-900 mb-4">
+                        Networking
+                      </h5>
+                      <ul className="space-y-3">
+                        {/* Item 1 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Website Designing
+                            <span className="text-blue-500 text-xs">New</span>
+                          </Link>
+                        </li>
+
+                        {/* Item 2 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border text-[15px] border-black rounded-xl p-1"
+                            />
+                            Catalog Designing
+                          </Link>
+                        </li>
+
+                        {/* Item 3 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Emailer Designing
+                          </Link>
+                        </li>
+                        {/* Item 4 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Emailer Designing
+                          </Link>
+                        </li>
+                        {/* Item 5 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Emailer Designing
+                          </Link>
+                        </li>
+                      </ul>
+                       <a
+            href="/contact-us"
+            className="text-center mt-4 inline-block text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
+          >
+          View All
+          </a>
+                    </div>
+                    {/* Column 4 */}
+                    <div >
+                      <h5 className="font-semibold text-gray-900 mb-4">
+                        Networking
+                      </h5>
+                      <ul className="space-y-3">
+                        {/* Item 1 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Website Designing
+                            <span className="text-blue-500 text-xs">New</span>
+                          </Link>
+                        </li>
+
+                        {/* Item 2 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border text-[15px] border-black rounded-xl p-1"
+                            />
+                            Catalog Designing
+                          </Link>
+                        </li>
+
+                        {/* Item 3 */}
+                        <li className="flex items-center gap-2 text-[13px]">
+                          <Link
+                            href="/nextjs"
+                            className="flex items-center gap-2 text-[13px]"
+                          >
+                            <img
+                              src="/images/icons/nextjs-icon.svg"
+                              width={35}
+                              height={35}
+                              alt="Next.js"
+                              className="border border-black rounded-xl p-1"
+                            />
+                            Emailer Designing
+                          </Link>
+                        </li>
+                      </ul>
+
+                      {/* Call to Action */}
+                      <div className="bg-[#d3e8f7] px-5 py-5 mt-2 rounded-xl">
+                        <p>Explore Pricing</p>
+                        <p>Talk to Sales</p>
+                        <p>Contact Support</p>
+                       
+                         <a
+            href="/contact-us"
+            className="hidden md:inline-block w-full text-center mt-2 py-3 text-white text-[15px] font-semibold rounded leading-[150%] bg-[#5E9ED5] border border-transparent hover:border-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] transition-all duration-500"
+          >
+           Get Started Free →
+          </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              )}
             </div>
-                
 
-            <Link href="/portfolio" className="text-white-80 hover:text-blue-600">
+            <Link
+              href="/portfolio"
+              className="text-white-80 text-[15px] hover:text-blue-600"
+            >
               Portfolio
             </Link>
-            <Link href="/packages" className="text-white-80 hover:text-blue-600">
+            <Link
+              href="/packages"
+              className="text-white-80 text-[15px] hover:text-blue-600"
+            >
               Packages
             </Link>
-            <Link href="/blogs" className="text-white-80 hover:text-blue-600">
+            <Link href="/blogs" className="text-white-80 text-[15px] hover:text-blue-600">
               Blogs
             </Link>
           </nav>
@@ -190,10 +532,10 @@ export default function Header() {
 
         {/* Right Side: Button */}
         <div className="hidden md:block space-x-[30px] items-center">
-          <Link href="/join" className="text-white-80 hover:text-blue-600">
+          <Link href="/join" className="text-white-80 text-[15px] hover:text-blue-600">
             Join
           </Link>
-          <Link href="/contact" className="text-white-80 hover:text-blue-600">
+          <Link href="/contact" className="text-white-80 text-[15px] hover:text-blue-600">
             Contact
           </Link>
 
@@ -216,12 +558,16 @@ export default function Header() {
       {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2">
-          <Link href="/" className="block text-white-80 hover:text-blue-600" onClick={() => setIsOpen(false)}>
+          <Link
+            href="/"
+            className="block text-white-80 text-[15px] hover:text-blue-600"
+            onClick={() => setIsOpen(false)}
+          >
             Home
           </Link>
           <Link
             href="/about"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white-80 text-[15px] hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Company Overview
@@ -229,22 +575,21 @@ export default function Header() {
 
           <div>
             <button
-              onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+              onClick={() => setIsMobileSubOpen(!isMobileSubOpen)}
               className="flex items-center justify-between w-full text-white hover:text-blue-600 transition-colors duration-200"
             >
               Services
               <ChevronDown
                 className={`ml-1 h-4 w-4 transition-transform duration-500 ${
-                  isSubMenuOpen ? "rotate-180" : ""
+                  isMobileSubOpen ? "rotate-180" : ""
                 }`}
               />
             </button>
 
             {/* Animated submenu */}
             <div
-              className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                isSubMenuOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-              }`}
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileSubOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
+`}
             >
               <div className="pl-4 mt-2 space-y-1">
                 <Link
@@ -252,7 +597,7 @@ export default function Header() {
                   className="block text-white hover:text-blue-600 transition-colors"
                   onClick={() => {
                     setIsOpen(false);
-                    setIsSubMenuOpen(false);
+                    setIsMobileSubOpen(false);
                   }}
                 >
                   Web Development
@@ -262,7 +607,7 @@ export default function Header() {
                   className="block text-white hover:text-blue-600 transition-colors"
                   onClick={() => {
                     setIsOpen(false);
-                    setIsSubMenuOpen(false);
+                    setIsMobileSubOpen(false);
                   }}
                 >
                   SEO
@@ -272,7 +617,7 @@ export default function Header() {
                   className="block text-white hover:text-blue-600 transition-colors"
                   onClick={() => {
                     setIsOpen(false);
-                    setIsSubMenuOpen(false);
+                    setIsMobileSubOpen(false);
                   }}
                 >
                   Graphic Design
@@ -283,35 +628,35 @@ export default function Header() {
 
           <Link
             href="/portfolio"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white-80 text-[15px] hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Portfolio
           </Link>
           <Link
             href="/packages"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white-80 text-[15px] hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Packages
           </Link>
           <Link
             href="/blogs"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white-80 text-[15px] hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Blogs
           </Link>
           <Link
             href="/join"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white-80 text-[15px] hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Join
           </Link>
           <Link
             href="/contact"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white-80 text-[15px] hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Contact

@@ -107,7 +107,7 @@ export default function Serving_Industries() {
 
   return (
    <div className='bg-[#F6F8FB]'>
-     <div className="container-width mx-auto py-10 px-[15px] md:px-15 bg-[#F6F8FB]">
+     <div className="container-width mx-auto py-20 px-[15px] md:px-15 bg-[#F6F8FB]">
       <div className="inner-section">
         <div className="heading flex flex-col md:flex-row justify-between items-center md:items-center gap-4">
           <h2 className="text-[32px] md:text-[48px] font-normal text-black leading-[120%]">
@@ -115,7 +115,7 @@ export default function Serving_Industries() {
           </h2>
           <a
             href="/serving-industries"
-            className="hidden md:inline-block px-[87px] py-3 text-white text-[16px] font-semibold rounded leading-[150%] bg-[#5E9ED5] border border-transparent hover:border-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] transition-all duration-500"
+            className="hidden md:inline-block px-[87px] py-3 text-white text-[15px] font-semibold rounded leading-[150%] bg-[#5E9ED5] border border-transparent hover:border-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] transition-all duration-500"
           >
             View All
           </a>
@@ -133,10 +133,10 @@ export default function Serving_Industries() {
             className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
             style={{ backgroundImage: `url('${card.image}')` }}
           >
-            <div className="absolute bottom-[20px] text-center w-full text-white p-3">
+            <div className="absolute bottom-[10px] text-center w-full text-white p-3">
               <div className="flex gap-[10px] justify-center items-center">
                 <img src={card.icon} alt={card.title} className="w-10 h-10" />
-                <h3 className="text-[16px] leading-[120%] font-normal">{card.title}</h3>
+                <h3 className="text-[15px] leading-[120%] font-normal">{card.title}</h3>
               </div>
             </div>
           </div>

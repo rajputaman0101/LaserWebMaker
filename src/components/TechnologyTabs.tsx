@@ -74,7 +74,7 @@ export default function TechnologyTabs() {
   const currentLogos = tabs.find((tab) => tab.key === activeTab)?.logos || [];
 
   return (
-    <div className="container-width relative mx-auto text-center px-[15px] md:px-15 py-10">
+    <div className="container-width relative mx-auto text-center px-[15px] md:px-15 py-20">
       <h2 className="text-[32px] md:text-5xl font-normal leading-[120%] mb-10">
         Technology We Use
       </h2>

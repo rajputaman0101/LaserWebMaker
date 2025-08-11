@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "Designing Service",
     answer:
-      "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr. Bу dоіng a lіttlе bіt оf rеѕеаrсh, you саn еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. ",
     image: "/images/services-img/designing-service.png",
     buttons: [
       { text: "Website Design", link: "/services/designing" },
@@ -19,20 +19,20 @@ const faqs = [
   {
     question: "Website Development",
     answer:
-      "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr. Bу dоіng a lіttlе bіt оf rеѕеаrсh, you саn еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. ",
       
      image: "/images/services-img/website-development.png",
   },
   {
     question: "E-commerce Website Development",
     answer:
-      "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr. Bу dоіng a lіttlе bіt оf rеѕеаrсh, you саn еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. ",
      image: "/images/services-img/ecommerce-website.png",
   },
   {
     question: "Hire Designer and Developer",
     answer:
-      "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr. Bу dоіng a lіttlе bіt оf rеѕеаrсh, you саn еnѕurе уоur dеѕіgn projects flоw smoothly and аrе hаndlеd іn a tіmе еffісіеnt and соѕt еffесtіvе mаnnеr.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. ",
      image: "/images/services-img/hire-developer.png",
   },
 ];
@@ -46,7 +46,7 @@ export default function Services_faqs() {
 
   return (
     <div className="bg-white container-width mx-auto ">
-      <div className=" md:px-[60px] py-10 px-[15px]">
+      <div className=" md:px-[60px] py-20 px-[15px]">
         <div className="outer-div  grid grid-flow-row gap-[40px]">
           <div className="heading">
             <h2 className="heading-second text-[48px] font-normal leading-[120%] text-black">
@@ -87,7 +87,7 @@ export default function Services_faqs() {
                     <button
                       aria-expanded={isOpen}
                       onClick={() => toggle(idx)}
-                      className="w-full text-left focus:outline-none justify-between items-center flex"
+                      className="w-full text-left focus:outline-none justify-between items-center flex cursor-pointer"
                     >
                       <span className="text-[20px] md:text-[32px] font-normal text-black leading-[120%]  ">
                         {faq.question}
@@ -137,7 +137,7 @@ export default function Services_faqs() {
                             </a>
                           ))}
                         </div>
-                        <p className="text-[16px] font-normal text-[#AEAEAE] leading-[150%]">{faq.answer}</p>
+                        <p className="text-[16px] font-normal text-black leading-[150%]">{faq.answer}</p>
                         {/* <p className="text-[13px] text-gray-500">
                           Want to know more about this service? Explore the
                           details below.

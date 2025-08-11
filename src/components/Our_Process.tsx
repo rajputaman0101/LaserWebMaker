@@ -63,7 +63,7 @@ export default function Our_Process() {
 
   return (
     <div className="bg-[#F6F8FB]">
-      <div className="container-width mx-auto px-[15px] md:px-15 py-10">
+      <div className="container-width mx-auto px-[15px] md:px-15 py-20">
         <div className="process-heading flex flex-col gap-10">
           <div className="flex flex-col md:flex-row justify-between gap-9 md:gap-12 items-start">
             <div className="w-full md:w-1/2">
@@ -72,7 +72,7 @@ export default function Our_Process() {
               </h2>
             </div>
             <div className="w-full md:w-[36%]">
-              <p className="text-[#AEAEAE] text-[16px] leading-[150%] font-normal">
+              <p className="text-black text-[16px] leading-[150%] font-normal">
                 We have highly professional team, which works systematically.
                 Our expert team follows the steps to ensure deliver an error
                 free website.
@@ -153,7 +153,7 @@ export default function Our_Process() {
                         
                       >
                         <div className="pt-4">
-                          <p className="text-[16px] font-normal text-[#AEAEAE] leading-[150%]">
+                          <p className="text-[16px] font-normal text-black leading-[150%]">
                             {faq.answer}
                           </p>
                         </div>

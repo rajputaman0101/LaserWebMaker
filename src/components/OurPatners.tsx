@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 export default function OurPatners() {
   return (
-    <div className="container-width mx-auto bg-[#F6F8FB] px-[15px] md:px-15 py-10 ">
+    <div className="container-width mx-auto bg-[#F6F8FB] px-[15px] md:px-15 py-20 ">
       <div className="outer-box flex flex-col md:flex-row ">
         <div className="content-box bg-[#5E9ED5] px-[30px] py-[30px] md:py-[20px] w-full md:max-w-[521px]">
           <div className="flex flex-col gap-[20px] ">

@@ -8,7 +8,7 @@ const footerSections = Array(8).fill({
 export default function Footer() {
   return (
     <div className=" bg-[#000000] ">
-      <div className="container-width mx-auto px-[15px] md:px-15 py-10 ">
+      <div className="container-width mx-auto px-[15px] md:px-15 py-20 ">
         <div className="flex flex-col gap-10 ">
           <div className="footer-location relative md:h-[250px] h-full">
             <div className="absolute inset-0 flex items-center z-20 justify-center pointer-events-none  ">
@@ -36,7 +36,7 @@ export default function Footer() {
                         priority
                       />
                     </div>
-                    <h4 className="text-[20px] text-white/70 leading-[150%] font-medium">
+                    <h4 className="text-[20px] text-white/90 leading-[150%] font-medium">
                       India
                     </h4>
                   </div>
@@ -49,13 +49,13 @@ export default function Footer() {
                         height={20}
                       />
 
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         +91-1203202969
                       </p>
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         ,
                       </p>
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         7291934043
                       </p>
                     </div>
@@ -66,7 +66,7 @@ export default function Footer() {
                         width={20}
                         height={20}
                       />
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         Office No 623, Noida One Building, Sector 62, Noida
                         UP-201309
                       </p>
@@ -90,7 +90,7 @@ export default function Footer() {
                         priority
                       />
                     </div>
-                    <h4 className="text-[20px] text-white/70 leading-[150%] font-medium">
+                    <h4 className="text-[20px] text-white/90 leading-[150%] font-medium">
                       Malaysia
                     </h4>
                   </div>
@@ -103,13 +103,13 @@ export default function Footer() {
                         height={20}
                       />
 
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         +91-1203202969
                       </p>
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         ,
                       </p>
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         7291934043
                       </p>
                     </div>
@@ -120,7 +120,7 @@ export default function Footer() {
                         width={20}
                         height={20}
                       />
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         Office No 623, Noida One Building, Sector 62, Noida
                         UP-201309
                       </p>
@@ -142,7 +142,7 @@ export default function Footer() {
                         priority
                       />
                     </div>
-                    <h4 className="text-[20px] text-white/70 leading-[150%] font-medium">
+                    <h4 className="text-[20px] text-white/90 leading-[150%] font-medium">
                       Saudi Arabia
                     </h4>
                   </div>
@@ -155,13 +155,13 @@ export default function Footer() {
                         height={20}
                       />
 
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         +91-1203202969
                       </p>
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         ,
                       </p>
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         7291934043
                       </p>
                     </div>
@@ -172,7 +172,7 @@ export default function Footer() {
                         width={20}
                         height={20}
                       />
-                      <p className="text-[12px] leading-[150%] font-light text-white/70">
+                      <p className="text-[12px] leading-[150%] font-light text-white/90">
                         Office No 623, Noida One Building, Sector 62, Noida
                         UP-201309
                       </p>
@@ -186,7 +186,7 @@ export default function Footer() {
           <div className="flex flex-col gap-[80px]">
             <div className="footer-content flex flex-col md:flex-row gap-y-[30px] md:gap-x-[120px] items-start">
               <div>
-                <p className="text-white/70 text-[12px] leading-[150%]">
+                <p className="text-white/90 text-[12px] leading-[150%]">
                   Lаѕеr Web Mаkеr іѕ аn іnduѕtrу lеаdеr іn рrоfеѕѕіоnаl wеbѕіtе
                   dеѕіgn, ѕtrаtеgу, dеvеlорmеnt, аnd hosting. Wе’rе trulу a
                   оnе-ѕtор ѕhор оffеrіng a full rаngе оf ѕоlutіоnѕ for anyone
@@ -194,7 +194,7 @@ export default function Footer() {
                   рrіvаtеlу hеld соmраnу wіth a lоng hіѕtоrу of рrоfіtаbіlіtу
                   аnd ѕtаbіlіtу.
                 </p>
-                <p className="text-white/70 text-[12px] leading-[150%]">
+                <p className="text-white/80 text-[15px] leading-[150%]">
                   Laser Web Maker has well qualified and experienced team to
                   build most creative & attractive websites.We have different
                   different plan that can fit in your budgets easily. We deals
@@ -208,7 +208,7 @@ export default function Footer() {
               </div>
               <a
                 href="/serving-industries"
-                className="group px-[16px] py-3 w-full text-white/70 text-[16px] md:text-[20px] border rounded leading-[26px] bg-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] hover:border-[#5E9ED5] transition-all duration-500 font-semibold text-center flex justify-center"
+                className="group px-[16px] py-3 w-full text-white/90 text-[16px] md:text-[20px] border rounded leading-[26px] bg-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] hover:border-[#5E9ED5] transition-all duration-500 font-semibold text-center flex justify-center"
               >
                 <span className="flex gap-[10px] items-center">
                   <span>Download Brochure</span>
@@ -226,58 +226,58 @@ export default function Footer() {
 
   <div className="linkes grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[80px]">
               <div className=" text-white gap-5 flex-col flex">
-                <h5 className="text-[16px] text-white/70 leading-[150%]">Heading</h5>
+                <h5 className="text-[16px] text-white/90 leading-[150%]">Heading</h5>
                 <ul className="gap-3 flex flex-col">
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                    <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                    <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
                 
                 </ul>
               </div>
                   <div className=" text-white gap-5 flex-col flex">
-                <h5 className="text-[16px] text-white/70 leading-[150%]">Heading</h5>
+                <h5 className="text-[16px] text-white/90 leading-[150%]">Heading</h5>
                 <ul className="gap-3 flex flex-col">
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                    <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                    <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
                 
                 </ul>
               </div>
                   <div className=" text-white gap-5 flex-col flex">
-                <h5 className="text-[16px] text-white/70 leading-[150%]">Heading</h5>
+                <h5 className="text-[16px] text-white/90 leading-[150%]">Heading</h5>
                 <ul className="gap-3 flex flex-col">
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                    <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                    <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
                 
                 </ul>
               </div>
                   <div className=" text-white gap-5 flex-col flex">
-                <h5 className="text-[16px] text-white/70 leading-[150%]">Heading</h5>
+                <h5 className="text-[16px] text-white/90 leading-[150%]">Heading</h5>
                 <ul className="gap-3 flex flex-col">
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                    <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                    <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
                 
                 </ul>
               </div>
@@ -285,58 +285,58 @@ export default function Footer() {
             </div>
             <div className="linkes grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[80px]">
               <div className=" text-white gap-5 flex-col flex">
-                <h5 className="text-[16px] text-white/70 leading-[150%]">Heading</h5>
+                <h5 className="text-[16px] text-white/90 leading-[150%]">Heading</h5>
                 <ul className="gap-3 flex flex-col">
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                    <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                    <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
                 
                 </ul>
               </div>
                   <div className=" text-white gap-5 flex-col flex">
-                <h5 className="text-[16px] text-white/70 leading-[150%]">Heading</h5>
+                <h5 className="text-[16px] text-white/90 leading-[150%]">Heading</h5>
                 <ul className="gap-3 flex flex-col">
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                    <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                    <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
                 
                 </ul>
               </div>
                   <div className=" text-white gap-5 flex-col flex">
-                <h5 className="text-[16px] text-white/70 leading-[150%]">Heading</h5>
+                <h5 className="text-[16px] text-white/90 leading-[150%]">Heading</h5>
                 <ul className="gap-3 flex flex-col">
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                    <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                    <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
                 
                 </ul>
               </div>
                   <div className=" text-white gap-5 flex-col flex">
-                <h5 className="text-[16px] text-white/70 leading-[150%]">Heading</h5>
+                <h5 className="text-[16px] text-white/90 leading-[150%]">Heading</h5>
                 <ul className="gap-3 flex flex-col">
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
-                  <li className="text-[12px] text-white/70 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
+                  <li className="text-[12px] text-white/90 leading-[150%] font-light">Link name</li>
                 
                 </ul>
               </div>
@@ -356,7 +356,7 @@ export default function Footer() {
                     {section.links.map((link, j) => (
                       <li
                         key={j}
-                        className="text-[12px] text-white/70 leading-[150%] font-light"
+                        className="text-[13px] text-white/90 leading-[150%] font-light"
                       >
                         {link}
                       </li>
@@ -370,7 +370,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between w-full  gap-10">
   {/* Left Side */}
   <div className="w-full md:w-1/2 order-2 md:order-1 flex flex-col  gap-4  md:gap-[30px]">
-    <h5 className="text-white text-[16px] font-semibold leading-[150%]">
+    <h5 className="text-white text-[15px] font-semibold leading-[150%]">
       &copy; 2025 Laser Web Maker
     </h5>
     <div className="flex  gap-4  md:gap-[40px] items-start md:items-end ">
@@ -394,10 +394,10 @@ export default function Footer() {
     {/* Social Links */}
     <div className="order-2 md:order-1">
       <ul className="flex flex-wrap justify-end gap-6 md:gap-10">
-        <li className="text-white text-[16px] font-semibold">Facebook</li>
-        <li className="text-white text-[16px] font-semibold">Instagram</li>
-        <li className="text-white text-[16px] font-semibold">Twitter</li>
-        <li className="text-white text-[16px] font-semibold">Google +</li>
+        <li className="text-white text-[15px] font-semibold">Facebook</li>
+        <li className="text-white text-[15px] font-semibold">Instagram</li>
+        <li className="text-white text-[15px] font-semibold">Twitter</li>
+        <li className="text-white text-[15px] font-semibold">Google +</li>
       </ul>
     </div>
 

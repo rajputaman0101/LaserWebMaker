@@ -1,4 +1,11 @@
 @import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+/* @import "flowbite"; */
+/* @plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json"; */
+/* @import 'flowbite'; */
 :root {
   --font-h2: 3rem;        /* 48px */
   --font-h3: 1.875rem;    /* 30px */
@@ -28,9 +35,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: DM Sans, sans-serif;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 500;
+  overflow-x: hidden;
+ 
    
   /* width: 1440px; */ 
    transition: scrollbar-color 0.3s ease;
@@ -150,6 +156,12 @@ body::-webkit-scrollbar-thumb:hover {
     width: 370px;
     background-color: #e2e8f0; /* Tailwind gray-200 */
   }
+    h2{
+    font-size: 32px !important;
+  }
+  p{
+    font-size: 15px !important;
+  }
 }
 
 
@@ -161,6 +173,16 @@ body::-webkit-scrollbar-thumb:hover {
   .custom-lg-box {
     padding: 20px;
     background-color: #fef9c3; /* Tailwind yellow-100 */
+  }
+  h2{
+    font-size: 40px !important;
+  }
+  p{
+    font-size: 15px !important;
+
+  }
+  h5{
+    font-size: 15px;
   }
 }
 
@@ -237,3 +259,5 @@ body::-webkit-scrollbar-thumb:hover {
 .filter-blue {
   filter: invert(66%) sepia(24%) saturate(493%) hue-rotate(174deg) brightness(91%) contrast(88%);
 }
+
+
