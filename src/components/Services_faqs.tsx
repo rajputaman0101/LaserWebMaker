@@ -49,7 +49,7 @@ export default function Services_faqs() {
       <div className=" md:px-[60px] py-20 px-[15px]">
         <div className="outer-div  grid grid-flow-row gap-[40px]">
           <div className="heading">
-            <h2 className="heading-second text-[48px] font-normal leading-[120%] text-black">
+            <h2 className="heading-second text-[40px] font-normal leading-[120%] text-black">
               Services
             </h2>
           </div>

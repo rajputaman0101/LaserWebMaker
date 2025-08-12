@@ -91,7 +91,7 @@ function renderStars(rating: number) {
 export default function Testimonials() {
   return (
     <div className="container-width mx-auto bg-white px-[15px] md:px-15 py-20 ">
-      <h2 className="text-center text-[48px] leading-[120%] font-normal text-black pb-10">
+      <h2 className="text-center text-[32px] md:text-[40px] leading-[120%] font-normal text-black pb-10">
         What Our Clients Say
       </h2>
       <div className="bg-[#5A9DD5] py-9 px-9 rounded-lg">

@@ -5,30 +5,31 @@ import Image from "next/image";
 const faqs = [
   {
     question: "Inception",
+    image:"/images/home_img/our-process/inception-img.jpg",
     answer:
       "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly...",
-    image: "/images/services-img/designing-service.png",
+    // image: "/images/services-img/designing-service.png",
     icon: "inception",
   },
   {
     question: "Contract",
     answer:
       "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly...",
-    image: "/images/services-img/website-development.png",
+    image: "/images/home_img/our-process/contract-img.jpg",
     icon: "contract",
   },
   {
     question: "Build",
     answer:
       "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly...",
-    image: "/images/services-img/ecommerce-website.png",
+    image: "/images/home_img/our-process/build-img.jpg",
     icon: "build",
   },
   {
     question: "UAT + Launch",
     answer:
       "Bу dоіng a lіttlе bіt оf rеѕеаrсh, you can еnѕurе уоur dеѕіgn projects flоw smoothly...",
-    image: "/images/services-img/hire-developer.png",
+    image: "/images/home_img/our-process/launch-img.jpg",
     icon: "launch",
   },
 ];
@@ -45,7 +46,8 @@ export default function Our_Process() {
     const newHeights = [...heights];
 
     if (openIndex !== null && contentRefs.current[openIndex]) {
-      newHeights[openIndex] = `${contentRefs.current[openIndex]?.scrollHeight}px`;
+      newHeights[openIndex] =
+        `${contentRefs.current[openIndex]?.scrollHeight}px`;
     }
 
     faqs.forEach((_, idx) => {
@@ -67,7 +69,7 @@ export default function Our_Process() {
         <div className="process-heading flex flex-col gap-10">
           <div className="flex flex-col md:flex-row justify-between gap-9 md:gap-12 items-start">
             <div className="w-full md:w-1/2">
-              <h2 className="text-black text-[32px] md:text-[48px] leading-[120%] font-normal">
+              <h2 className="text-black text-[32px] md:text-[40px] leading-[120%] font-normal">
                 Website Development Process
               </h2>
             </div>
@@ -89,15 +91,15 @@ export default function Our_Process() {
                 return (
                   <div
                     key={idx}
-                    className="md:flex w-full items-start gap-3 relative"
+                    className="flex flex-row w-full items-start gap-3 relative"
                   >
                     {/* Timeline */}
-                    <div className="hidden md:flex flex-col items-center pt-1 relative min-w-[10px]">
+                    <div className="flex flex-col items-center pt-1 min-w-[10px]">
                       <div
                         className={`w-[32px] h-[32px] rounded-full flex items-center justify-center text-sm font-bold z-10 ${
                           isOpen
-                            ? "bg-[#589CD5] text-white"
-                            : "bg-gray-300 text-black"
+                            ? "bg-[#E5EB33] text-black"
+                            : "bg-[#000] text-white"
                         }`}
                       >
                         {idx + 1}
@@ -106,10 +108,10 @@ export default function Our_Process() {
                         <div
                           className={`w-[2px] transition-all duration-500 ease-in-out ${
                             openIndex !== null && idx === openIndex
-                              ? "bg-[#589CD5] h-[100px]"
+                              ? "bg-[#E5EB33] h-[250px] md:h-[180px]"
                               : openIndex !== null && idx < openIndex
-                              ? "bg-[#589CD5] h-[50px]"
-                              : "bg-gray-300 h-[30px]"
+                                ? "bg-[#E5EB33] h-[35px]"
+                                : "bg-[#000] h-[35px]"
                           }`}
                         />
                       )}
@@ -132,9 +134,7 @@ export default function Our_Process() {
                             width={32}
                             height={32}
                             className={`transition-all duration-300 ${
-                              isOpen
-                                ? "filter-blue"
-                                : "opacity-10 brightness-0"
+                              isOpen ? "filter-blue" : "opacity-50 brightness-0"
                             }`}
                           />
                         </span>
@@ -143,16 +143,21 @@ export default function Our_Process() {
                       {/* Answer */}
                       <div
                         ref={(el) => {
-    contentRefs.current[idx] = el;
-  }}
-  style={{
-    height: heights[idx],
-    overflow: "hidden",
-    transition: "height 0.4s ease",
-  }}
-                        
+                          contentRefs.current[idx] = el;
+                        }}
+                        style={{
+                          height: heights[idx],
+                          overflow: "hidden",
+                          transition: "height 0.4s ease",
+                        }}
                       >
-                        <div className="pt-4">
+                        <div className="pt-4 md:flex-row gap-5 flex flex-col  ">
+                           <Image
+                        src={faq.image}
+                        alt="location"
+                        width={280}
+                        height={240}
+                      />
                           <p className="text-[16px] font-normal text-black leading-[150%]">
                             {faq.answer}
                           </p>

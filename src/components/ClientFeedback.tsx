@@ -115,7 +115,7 @@ export default function VideoSlider() {
     <div className="container-width mx-auto px-[15px] md:px-15 py-20 bg-[#fff] relative z-10 ">
       <div className="flex flex-col gap-10">
         <div className="flex justify-center ">
-          <h2 className="text-black text-[32px] md:text-[48px] leading-[120%] font-normal">
+          <h2 className="text-black text-[32px] md:text-[40px] leading-[120%] font-normal">
             Our Clients Feedback
           </h2>
         </div>

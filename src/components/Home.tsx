@@ -23,31 +23,29 @@ export default function Home() {
       <div className=" container-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-0">
         {/* First Image with Text */}
         <div className="relative w-full h-[400px] md:h-[820px] ">
-        
           <Image
             src="/images/home_img/banner_1img-min.jpg"
             alt="Banner Image 1"
             fill
             className="object-cover"
-            
             priority
           />
           {/* Text Overlay */}
           <div className=" absolute bottom-3 left-0 right-0  px-[15px] md:px-[60px]  pb-4 ">
             <div
-              className="p-5 relative bg-white/10 backdrop-blur-[5px] rounded-lg overflow-hidden
+              className="p-5 relative bg-white/10 backdrop-blur-[15px] rounded-lg overflow-hidden
              before:absolute before:inset-0 before:rounded-lg before:border before:border-[#C7C7C7]/20 
              before:pointer-events-none"
             >
               <div className="  flex items-end gap-2 ">
                 <p className="text-black  z-10 md:text-sm text-[7.48px] font-semibold">
-                  Trusted by 5,000+ Clients Worldwide 
+                  Trusted by 5,000+ Clients Worldwide
                 </p>
-                 <p className="text-black md:text-sm text-[7.48px] z-10 font-normal ">
-                 ( 4.9 rating
+                <p className="text-black md:text-sm text-[7.48px] z-10 font-normal ">
+                  ( 4.9 rating
                 </p>
 
-                <div className="flex items-end gap-1 text-[7.48px] pb-2 md:pb-1 z-10 font-normal md:text-sm text-[#FFC107] ">
+                <div className="flex items-end gap-1 text-[7.48px] pb-0 md:pb-1 z-10 font-normal md:text-sm text-[#FFC107] ">
                   {/* 4 full yellow stars */}
                   {[...Array(4)].map((_, index) => (
                     <Star key={index} size={9} className="fill-[#FFC107]" />
@@ -113,7 +111,7 @@ export default function Home() {
                       <clipPath id="clip0_179_33841">
                         <rect
                           width="112.85"
-                          height="37.0289"
+                          height="37.3"
                           fill="white"
                           transform="translate(0 0.985535)"
                         />
@@ -126,7 +124,7 @@ export default function Home() {
                   <Image
                     src="/images/icons/trustpilpt.svg"
                     alt="Arrow Icon"
-                    width={138}
+                    width={138.75}
                     height={37}
                     priority
                   />
@@ -135,8 +133,8 @@ export default function Home() {
                   <Image
                     src="/images/icons/clutch.svg"
                     alt="Arrow Icon"
-                    width={112}
-                    height={37}
+                    width={112.85}
+                    height={37.14}
                     priority
                   />
                 </span>
@@ -144,8 +142,8 @@ export default function Home() {
                   <Image
                     src="/images/icons/goodfirms.svg"
                     alt="Arrow Icon"
-                    width={162}
-                    height={36}
+                    width={162.8}
+                    height={36.9}
                     priority
                   />
                 </span>
@@ -155,30 +153,33 @@ export default function Home() {
         </div>
 
         {/* Second Image with Text */}
-        <div className="relative w-full h-[274px] md:h-[820px] " style={{
-    background: 'linear-gradient(-11deg, #4D97D5 0%, #64A1D5 100%)',
-  }}>
+        <div
+          className="relative w-full h-[274px] md:h-[820px] "
+          style={{
+            background: "linear-gradient(-11deg, #4D97D5 0%, #64A1D5 100%)",
+          }}
+        >
           {/* Mobile Image */}
 
-            {/* mobile image */}
-           <Image
+          {/* mobile image */}
+          <Image
             src="/images/home_img/mobile-m-logo.png"
             alt="Mobile Banner"
-             width={90} // Set appropriate width
-    height={10} // Set appropriate height
+            width={90} // Set appropriate width
+            height={10} // Set appropriate height
             className="absolute top-0 right-0 z-10  object-contain block md:hidden "
             //  sizes="(max-width: 768px) 100vw, 50vw"
             priority
           />
 
- <Image
-    src="/images/home_img/m-logo.svg"
-    alt="Mobile Banner"
-    width={312} // Set appropriate width
-    height={100} // Set appropriate height
-    className="absolute top-0 right-0 z-10 object-contain hidden md:block md:w-[312px] md:h-[100%] "
-    priority
-  />
+          <Image
+            src="/images/home_img/m-logo.svg"
+            alt="Mobile Banner"
+            width={312} // Set appropriate width
+            height={100} // Set appropriate height
+            className="absolute top-0 right-0 z-10 object-contain hidden md:block md:w-[312px] md:h-[100%] "
+            priority
+          />
 
           {/* <Image
             src="/images/home_img/mobile_mode_banner21.png"
@@ -217,7 +218,7 @@ export default function Home() {
               Company
             </h2>
             {/* hover:scale-105 transition */}
-            <div className="w-148px h-44px md:w-[168px] md:h-[50px] px-2 btn-contact group text-2xl inline-flex items-center justify-center gap-[10px] mt-3 md:mt-5 rounded-sm bg-gradient-to-t from-white via-white to-white text-[#057BC1]  w-max font-red-hat">
+            <div className="w-148px  md:w-[168px] md:h-[50px] px-5 md:px-2 py-[10px] btn-contact group text-2xl inline-flex items-center justify-center gap-[10px] mt-3 md:mt-5 rounded-sm bg-gradient-to-t from-white via-white to-white text-[#057BC1]  w-max font-red-hat">
               <span className="md:text-xl text-[16px] font-semibold leading-[26px]">
                 Contact Us
               </span>
@@ -435,7 +436,6 @@ export default function Home() {
                   <p className="text-[12px] leading-[150%] font-light text-white/75">
                     7291934043
                   </p>
-                      
                 </div>
               </div>
             </div>

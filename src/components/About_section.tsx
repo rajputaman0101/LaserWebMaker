@@ -12,7 +12,7 @@ const counterData = [
     // suffix: "+ Years",
     label: 'Years Experience',
     bg: '#C6DEEA',
-    image: '/images/icons/counter1img.png',
+    image: '/images/icons/counter1.png',
     imageW: 113,
     imageH: 120,
   },
@@ -20,7 +20,7 @@ const counterData = [
     value: 10000,
     label: 'Happy Customers',
     bg: '#C8CCCD',
-    image: '/images/icons/happy-customers.png',
+    image: '/images/icons/counter2.png',
     imageW: 75,
     imageH: 100,
   },
@@ -28,7 +28,7 @@ const counterData = [
     value: 90,
     label: 'Expert Team',
     bg: '#D9F5EF',
-    image: '/images/icons/expert-team.png',
+    image: '/images/icons/counter3.png',
     imageW: 90,
     imageH: 100,
   },
@@ -36,7 +36,7 @@ const counterData = [
     value: 900,
     label: 'Total Reviews',
     bg: '#ECEBE9',
-    image: '/images/icons/total-reviews.png',
+    image: '/images/icons/counter4.png',
     imageW: 75,
     imageH: 100,
   },
@@ -186,17 +186,17 @@ export default function About_section() {
       {counterData.map((item, index) => (
         <div key={index} className=" rounded-lg h-full"
         style={{ backgroundColor: item.bg }}>
-          <div className="inner items-center flex gap-4 md:gap-0 flex-col md:flex-row justify-center  pt-[10px] md:justify-around">
+          <div className="inner items-center flex gap-4 md:gap-0 flex-col md:flex-row justify-center px-5  pt-[10px] md:justify-between">
             <div className="counter">
               {/* <h2 className="text-black text-[28px] font-bold leading-[36px]">
                 {hasViewed ? <CountUp start={0} end={item.value} duration={2} /> : 0}
                   {item.suffix ? ` ${item.suffix}` : "+"}
               </h2> */}
-              <h2 className="text-black text-[28px] font-semibold leading-[36px]">
+              <h2 className="text-black text-[28px] font-normal leading-[36px] items-start">
   {hasViewed ? <CountUp start={0} end={item.value} duration={2} /> : 0}+
 </h2>
 
-              <p className="text-[#000000] text-[14px] font-bold leading-[18px] md:leading[120%]">
+              <p className="text-[#000000] text-[14px] font-normal leading-[18px] md:leading[120%]">
                 {item.label}
               </p>
             </div>

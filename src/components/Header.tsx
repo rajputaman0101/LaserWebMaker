@@ -87,7 +87,7 @@ export default function Header() {
             </Link>
             <Link
               href="/about"
-              className="block text-white-80 hover:text-blue-600"
+              className="block text-white text-opacity-80 hover:text-blue-600"
               onClick={() => setIsOpen(false)}
             >
               Company Overview
@@ -139,13 +139,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Website Designing
                             <span className="text-blue-500 text-xs">New</span>
                           </Link>
@@ -157,13 +157,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border text-[15px] border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Catalog Designing
                           </Link>
                         </li>
@@ -174,13 +174,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                           <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Emailer Designing
                           </Link>
                         </li>
@@ -191,13 +191,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             PSD To HTML Designing
                           </Link>
                         </li>
@@ -208,24 +208,24 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                             <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Logo Designing
                           </Link>
                         </li>
                       </ul>
 
-                       <a
-            href="/contact-us"
-            className="text-center mt-4 inline-block text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
-          >
-           View All
-          </a>
+                      <a
+                        href="/contact-us"
+                        className="text-center mt-4 inline-block text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
+                      >
+                        View All
+                      </a>
                     </div>
 
                     {/* Column 2 */}
@@ -240,13 +240,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Website Designing
                             <span className="text-blue-500 text-xs">New</span>
                           </Link>
@@ -258,13 +258,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border text-[15px] border-black rounded-xl p-1"
-                            />
+                             <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Catalog Designing
                           </Link>
                         </li>
@@ -275,13 +275,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                             <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Emailer Designing
                           </Link>
                         </li>
@@ -292,13 +292,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             PSD To HTML Designing
                           </Link>
                         </li>
@@ -309,23 +309,23 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Logo Designing
                           </Link>
                         </li>
                       </ul>
-                       <a
-            href="/contact-us"
-            className="text-center mt-4 inline-block text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
-          >
-           View All
-          </a>
+                      <a
+                        href="/contact-us"
+                        className="text-center mt-4 inline-block text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
+                      >
+                        View All
+                      </a>
                     </div>
 
                     {/* Column 3 */}
@@ -340,13 +340,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Website Designing
                             <span className="text-blue-500 text-xs">New</span>
                           </Link>
@@ -358,13 +358,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border text-[15px] border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Catalog Designing
                           </Link>
                         </li>
@@ -375,13 +375,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                             <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Emailer Designing
                           </Link>
                         </li>
@@ -391,13 +391,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Emailer Designing
                           </Link>
                         </li>
@@ -407,26 +407,26 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Emailer Designing
                           </Link>
                         </li>
                       </ul>
-                       <a
-            href="/contact-us"
-            className="text-center mt-4 inline-block text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
-          >
-           View All
-          </a>
+                      <a
+                        href="/contact-us"
+                        className="text-center mt-4 inline-block text-[#5E9ED5] text-[13px] font-normal  leading-[150%]   hover:underline border-transparent  hover:text-[#5E9ED5] transition-all duration-500"
+                      >
+                        View All
+                      </a>
                     </div>
                     {/* Column 4 */}
-                    <div >
+                    <div>
                       <h5 className="font-semibold text-gray-900 mb-4">
                         Networking
                       </h5>
@@ -437,13 +437,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                           <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Website Designing
                             <span className="text-blue-500 text-xs">New</span>
                           </Link>
@@ -455,13 +455,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border text-[15px] border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Catalog Designing
                           </Link>
                         </li>
@@ -472,13 +472,13 @@ export default function Header() {
                             href="/nextjs"
                             className="flex items-center gap-2 text-[13px]"
                           >
-                            <img
-                              src="/images/icons/nextjs-icon.svg"
-                              width={35}
-                              height={35}
-                              alt="Next.js"
-                              className="border border-black rounded-xl p-1"
-                            />
+                            <Image
+  src="/images/icons/nextjs-icon.svg"
+  width={35}
+  height={35}
+  alt="Next.js"
+  className="border border-black rounded-xl p-1"
+/>
                             Emailer Designing
                           </Link>
                         </li>
@@ -489,34 +489,33 @@ export default function Header() {
                         <p>Explore Pricing</p>
                         <p>Talk to Sales</p>
                         <p>Contact Support</p>
-                       
-                         <a
-            href="/contact-us"
-            className="hidden md:inline-block w-full text-center mt-2 py-3 text-white text-[15px] font-semibold rounded leading-[150%] bg-[#5E9ED5] border border-transparent hover:border-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] transition-all duration-500"
-          >
-           Get Started Free →
-          </a>
+
+                        <a
+                          href="/contact-us"
+                          className="hidden md:inline-block w-full text-center mt-2 py-3 text-white text-[15px] font-semibold rounded leading-[150%] bg-[#5E9ED5] border border-transparent hover:border-[#5E9ED5] hover:bg-transparent hover:text-[#5E9ED5] transition-all duration-500"
+                        >
+                          Get Started Free →
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
-
               )}
             </div>
 
             <Link
               href="/portfolio"
-              className="text-white-80 hover:text-blue-600"
+              className="text-white text-opacity-80 hover:text-blue-600"
             >
               Portfolio
             </Link>
             <Link
               href="/packages"
-              className="text-white-80 hover:text-blue-600"
+              className="text-white text-opacity-80 hover:text-blue-600"
             >
               Packages
             </Link>
-            <Link href="/blogs" className="text-white-80 hover:text-blue-600">
+            <Link href="/blogs" className="text-white text-opacity-80 hover:text-blue-600">
               Blogs
             </Link>
           </nav>
@@ -524,10 +523,10 @@ export default function Header() {
 
         {/* Right Side: Button */}
         <div className="hidden md:block space-x-[30px] items-center">
-          <Link href="/join" className="text-white-80 hover:text-blue-600">
+          <Link href="/join" className="text-white text-opacity-80 hover:text-blue-600">
             Join
           </Link>
-          <Link href="/contact" className="text-white-80 hover:text-blue-600">
+          <Link href="/contact" className="text-white text-opacity-80 hover:text-blue-600">
             Contact
           </Link>
 
@@ -552,14 +551,14 @@ export default function Header() {
         <div className="md:hidden px-4 pb-4 space-y-2">
           <Link
             href="/"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white text-opacity-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white text-opacity-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Company Overview
@@ -620,35 +619,35 @@ export default function Header() {
 
           <Link
             href="/portfolio"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white text-opacity-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Portfolio
           </Link>
           <Link
             href="/packages"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white text-opacity-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Packages
           </Link>
           <Link
             href="/blogs"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white text-opacity-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Blogs
           </Link>
           <Link
             href="/join"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white text-opacity-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Join
           </Link>
           <Link
             href="/contact"
-            className="block text-white-80 hover:text-blue-600"
+            className="block text-white text-opacity-80 hover:text-blue-600"
             onClick={() => setIsOpen(false)}
           >
             Contact

@@ -7,16 +7,16 @@ export default function OurPatners() {
         <div className="content-box bg-[#5E9ED5] px-[30px] py-[30px] md:py-[20px] w-full md:max-w-[521px]">
           <div className="flex flex-col gap-[20px] ">
             <div className="">
-              <h3 className="text-[#F2E488] font-semibold text-[20px] md:text-[32px]  leading-[120%] ">
+              <h3 className="text-[#F2E488] font-semibold text-[20px] md:text-[30px]  leading-[120%] ">
                 
                 Reach Your Business Goals
               </h3>
-              <h3 className="text-[#fff] font-medium text-[20px] md:text-[32px]  leading-[120%] ">
+              <h3 className="text-[#fff] font-medium text-[20px] md:text-[25px]  leading-[120%] ">
                 in 2025 with Laserwebmaker
               </h3>
             </div>
             <div className="content">
-              <p className="text-[14px] text-white/80 font-normal leading-[120%]">
+              <p className="text-[15px] text-white/80 font-normal leading-[120%]">
                 Laserwebmaker has always worked hard to make sure that we’re
                 getting what we need out of the partnership, not just what may
                 seem like the best result.

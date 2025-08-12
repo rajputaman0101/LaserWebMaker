@@ -8,7 +8,7 @@ const footerSections = Array(8).fill({
 export default function Footer() {
   return (
     <div className=" bg-[#000000] ">
-      <div className="container-width mx-auto px-[15px] md:px-15 py-20 ">
+      <div className="container-width mx-auto px-[15px] md:px-[60px] py-20 ">
         <div className="flex flex-col gap-10 ">
           <div className="footer-location relative md:h-[250px] h-full">
             <div className="absolute inset-0 flex items-center z-20 justify-center pointer-events-none  ">
@@ -17,8 +17,7 @@ export default function Footer() {
                 alt="Center Decoration"
                 width={992}
                 height={250}
-                objectFit="contain"
-                className="opacity-100"
+                className="opacity-100 object-contain"
               />
             </div>
             <div className="inner-location-section flex flex-wrap flex-col lg:flex-row md:gap-30 gap-[16px] bg_footer">
@@ -33,7 +32,6 @@ export default function Footer() {
                         alt="India"
                         width={50}
                         height={50}
-                        priority
                       />
                     </div>
                     <h4 className="text-[20px] text-white/90 leading-[150%] font-medium">
@@ -87,7 +85,6 @@ export default function Footer() {
                         alt="India"
                         width={50}
                         height={50}
-                        priority
                       />
                     </div>
                     <h4 className="text-[20px] text-white/90 leading-[150%] font-medium">
@@ -139,7 +136,6 @@ export default function Footer() {
                         alt="India"
                         width={50}
                         height={50}
-                        priority
                       />
                     </div>
                     <h4 className="text-[20px] text-white/90 leading-[150%] font-medium">
@@ -186,25 +182,27 @@ export default function Footer() {
           <div className="flex flex-col gap-[80px]">
             <div className="footer-content flex flex-col md:flex-row gap-y-[30px] md:gap-x-[120px] items-start">
               <div>
-                <p className="text-white/90 text-[12px] leading-[150%]">
-                  Lаѕеr Web Mаkеr іѕ аn іnduѕtrу lеаdеr іn рrоfеѕѕіоnаl wеbѕіtе
-                  dеѕіgn, ѕtrаtеgу, dеvеlорmеnt, аnd hosting. Wе’rе trulу a
-                  оnе-ѕtор ѕhор оffеrіng a full rаngе оf ѕоlutіоnѕ for anyone
-                  lооkіng tо ѕuссееd in thеіr оnlіnе еndеаvоrѕ. Laser Web Maker
-                  рrіvаtеlу hеld соmраnу wіth a lоng hіѕtоrу of рrоfіtаbіlіtу
-                  аnd ѕtаbіlіtу.
-                </p>
-                <p className="text-white/80 text-[15px] leading-[150%]">
+                <span className="text-white/90 text-[13px] ">
                   Laser Web Maker has well qualified and experienced team to
                   build most creative & attractive websites.We have different
                   different plan that can fit in your budgets easily. We deals
                   in Website Designing, Website Development, E-Commerce Website,
                   Logo Designing, Template Designing, CMS Development, Catalog
                   Designing, etc. Building long-term relationships with our
-                  clients is Laser Web Maker’s No.1 priority. 95% of our
-                  customers return to us with new projects because they enjoy
-                  the quality of the websites that we create .
-                </p>
+                  clients is Laser Web Maker's No.1 .
+                </span>
+                <br />
+                <span className="text-white/80 text-[13px] ">
+                  Laser Web Maker has well qualified and experienced team to
+                  build most creative & attractive websites.We have different
+                  different plan that can fit in your budgets easily. We deals
+                  in Website Designing, Website Development, E-Commerce Website,
+                  Logo Designing, Template Designing, CMS Development, Catalog
+                  Designing, etc. Building long-term relationships with our
+                  clients is Laser Web Maker's No.1 . 95% of our customers
+                  return to us with new projects because they enjoy the quality
+                  of the websites that we create .
+                </span>
               </div>
               <a
                 href="/serving-industries"
@@ -367,53 +365,59 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex py-[20px] border-t  border-t-[#FFFFFF]/50">
-          <div className="flex flex-col md:flex-row justify-between w-full  gap-10">
-  {/* Left Side */}
-  <div className="w-full md:w-1/2 order-2 md:order-1 flex flex-col  gap-4  md:gap-[30px]">
-    <h5 className="text-white text-[15px] font-semibold leading-[150%]">
-      &copy; 2025 Laser Web Maker
-    </h5>
-    <div className="flex  gap-4  md:gap-[40px] items-start md:items-end ">
-      <div className="flex flex-col md:gap-1 gap-4">
-<div>        <p className="text-white">All Right Reserved</p></div>
-       <div className="flex gap-[14px] md:gap-[80px]" >
-         <p className="text-white">Terms of Use</p>
-      <span className="flex md:gap-[40px] gap-[14px]">
-        <p className="text-white">Privacy Policy</p>
-      <p className="text-white">Return Policy</p>
-      </span>
-      
-      </div>
-      </div>
-      
-    </div>
-  </div>
+            <div className="flex flex-col md:flex-row justify-between w-full  gap-10">
+              {/* Left Side */}
+              <div className="w-full md:w-1/2 order-2 md:order-1 flex flex-col  gap-4  md:gap-[30px]">
+                <h5 className="text-white text-[15px] font-semibold leading-[150%]">
+                  &copy; {new Date().getFullYear()} Laser Web Maker
+                </h5>
+                <div className="flex  gap-4  md:gap-[40px] items-start md:items-end ">
+                  <div className="flex flex-col md:gap-1 gap-4">
+                    <div>
+                      <p className="text-white">All Right Reserved</p>
+                    </div>
+                    <div className="flex gap-[14px] md:gap-[80px]">
+                      <p className="text-white">Terms of Use</p>
+                      <span className="flex md:gap-[40px] gap-[14px]">
+                        <p className="text-white">Privacy Policy</p>
+                        <p className="text-white">Return Policy</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-  {/* Right Side */}
-  <div className="w-full md:w-1/2 order-1 md:order-2 flex flex-col items-start md:items-end gap-5 md:gap-[40px]">
-    {/* Social Links */}
-    <div className="order-2 md:order-1">
-      <ul className="flex flex-wrap justify-end gap-6 md:gap-10">
-        <li className="text-white text-[15px] font-semibold">Facebook</li>
-        <li className="text-white text-[15px] font-semibold">Instagram</li>
-        <li className="text-white text-[15px] font-semibold">Twitter</li>
-        <li className="text-white text-[15px] font-semibold">Google +</li>
-      </ul>
-    </div>
+              {/* Right Side */}
+              <div className="w-full md:w-1/2 order-1 md:order-2 flex flex-col items-start md:items-end gap-5 md:gap-[40px]">
+                {/* Social Links */}
+                <div className="order-2 md:order-1">
+                  <ul className="flex flex-wrap justify-end gap-6 md:gap-10">
+                    <li className="text-white text-[15px] font-semibold">
+                      Facebook
+                    </li>
+                    <li className="text-white text-[15px] font-semibold">
+                      Instagram
+                    </li>
+                    <li className="text-white text-[15px] font-semibold">
+                      Twitter
+                    </li>
+                    <li className="text-white text-[15px] font-semibold">
+                      Google +
+                    </li>
+                  </ul>
+                </div>
 
-    {/* Logo */}
-    <div className="order-1 md:order-2  ">
-      <Image
-        src="/images/home_img/svg-logo/site-logo.svg"
-        alt="Logo"
-        width={247}
-        height={43}
-        priority
-      />
-    </div>
-  </div>
-</div>
-
+                {/* Logo */}
+                <div className="order-1 md:order-2  ">
+                  <Image
+                    src="/images/home_img/svg-logo/site-logo.svg"
+                    alt="Logo"
+                    width={247}
+                    height={43}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
