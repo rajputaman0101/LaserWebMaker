@@ -1,25 +1,46 @@
 import React from "react";
 import Image from "next/image";
 import { Download } from "lucide-react";
-const footerSections = Array(8).fill({
+interface FooterSection {
+  heading: string;
+  links: string[];
+}
+
+const footerSections: FooterSection[] = Array.from({ length: 8 }, () => ({
   heading: "Heading",
-  links: Array(8).fill("Link name"),
-});
+  links: Array.from({ length: 8 }, () => "Link name"),
+}));
+
+
 export default function Footer() {
   return (
     <div className=" bg-[#000000] ">
       <div className="container-width mx-auto px-[15px] md:px-[60px] py-20 ">
         <div className="flex flex-col gap-10 ">
           <div className="footer-location relative md:h-[250px] h-full">
-            <div className="absolute inset-0 flex items-center z-20 justify-center pointer-events-none  ">
-              <Image
-                src="/images/footer/map.png" // replace with your image path
-                alt="Center Decoration"
-                width={992}
-                height={250}
-                className="opacity-100 object-contain"
-              />
-            </div>
+            
+             {/* Desktop Map Image (hidden on mobile) */}
+  <div className="absolute inset-0  items-center justify-center pointer-events-none z-10 flex  md:flex">
+    <Image
+      src="/images/footer/map.png"
+      alt="Map Desktop"
+      width={992}
+      height={250}
+      className="object-contain"
+    />
+  </div>
+
+   Mobile Map Image (visible only on mobile)
+  <div className="absolute inset-0  items-center justify-center pointer-events-none z-10 hidden">
+    <Image
+      src="/images/footer/mobile-map.svg"
+      alt="Map Mobile"
+      width={400}  // adjust as needed
+      height={250} // adjust as needed
+      className="object-contain"
+    />
+  </div>
+              {/* <div className="absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-black/80 to-transparent md:hidden" /> */}
             <div className="inner-location-section flex flex-wrap flex-col lg:flex-row md:gap-30 gap-[16px] bg_footer">
               {/* First Location */}
               <div className=" flex">
@@ -346,22 +367,18 @@ export default function Footer() {
           */}
             <div className="linkes grid grid-cols-3 sm:grid-cols-2  lg:grid-cols-4 gap-[40px]  md:gap-[80px]">
               {footerSections.map((section, i) => (
-                <div key={i} className="text-white gap-5 flex-col flex ">
-                  <h5 className="text-[16px] text-white leading-[150%] ">
-                    {section.heading}
-                  </h5>
-                  <ul className="gap-3 flex flex-col">
-                    {section.links.map((link, j) => (
-                      <li
-                        key={j}
-                        className="text-[13px] text-white/90 leading-[150%] font-light"
-                      >
-                        {link}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+  <ul key={i} className="gap-3 flex flex-col">
+    {section.links.map((link, j) => (
+      <li
+        key={j}
+        className="text-[13px] text-white/90 leading-[150%] font-light"
+      >
+        {link}
+      </li>
+    ))}
+  </ul>
+))}
+
             </div>
           </div>
           <div className="flex py-[20px] border-t  border-t-[#FFFFFF]/50">

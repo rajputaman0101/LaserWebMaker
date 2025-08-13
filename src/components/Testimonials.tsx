@@ -150,26 +150,33 @@ export default function Testimonials() {
                 <h2 className="text-white text-[32px] font-bold font-[Noto_Sans_HK] leading-[38px]">
                   4.9
                 </h2>
-               <div className="flex items-end gap-1 text-[7.48px] pb-2 md:pb-1 z-10 font-normal md:text-sm text-[#FFC107] ">
-                                 {/* 4 full yellow stars */}
-                                 {[...Array(4)].map((_, index) => (
-                                   <Star key={index} size={9} className="fill-[#FFC107]" />
-                                 ))}
-               
-                                 {/* Half star using clipped overlay */}
-                                 <div className="relative w-[4.94px] h-[8.66px] md:w-[9.24px] md:h-[8.73px]">
-                                   {/* Base white star */}
-                                   <Star size={9} className="fill-white text-white" />
-               
-                                   {/* Overlay left half yellow star */}
-                                   <div className="absolute top-0 left-0 md:w-1/2 w-2/2 h-full overflow-hidden">
-                                     <Star
-                                       size={9}
-                                       className="fill-[#FFC107] text-[#FFC107]"
-                                     />
-                                   </div>
-                                 </div>
-                               </div>
+               <div className="flex items-start md:items-end gap-1 text-[7.48px] pb-0 md:pb-1 z-10 font-normal md:text-sm">
+                                {/* 4 full yellow stars */}
+                                {[...Array(4)].map((_, index) => (
+                                  <div
+                                    key={index}
+                                    className="relative w-[9.24px] h-[8.73px]"
+                                  >
+                                    <Image
+                                      src="/images/icons/star.svg"
+                                      alt="Full Star"
+                                      fill
+                                      className="object-contain"
+                                    />
+                                  </div>
+                                ))}
+              
+                                {/* Half star */}
+                                {/* Half star as static image using Next.js Image */}
+                                <div className="relative w-[9.24px] h-[8.73px]">
+                                  <Image
+                                    src="/images/icons/half_star.svg"
+                                    alt="Half Star"
+                                    fill
+                                    className="object-contain"
+                                  />
+                                </div>
+                              </div>
               </div>
             </div>
           </div>

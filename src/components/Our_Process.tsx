@@ -155,8 +155,8 @@ export default function Our_Process() {
                            <Image
                         src={faq.image}
                         alt="location"
-                        width={280}
-                        height={240}
+                        width={480}
+                        height={440}
                       />
                           <p className="text-[16px] font-normal text-black leading-[150%]">
                             {faq.answer}

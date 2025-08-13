@@ -1,22 +1,22 @@
 import React from "react";
 import Image from "next/image";
-import { Star } from "lucide-react";
-const HalfStar = () => (
-  <svg
-    viewBox="0 0 24 24"
-    className="w-full h-full"
-    fill="url(#half)"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <linearGradient id="half">
-        <stop offset="50%" stopColor="#FFC107" />
-        <stop offset="50%" stopColor="white" />
-      </linearGradient>
-    </defs>
-    <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.782 1.401 8.169L12 18.896l-7.335 3.865 1.401-8.169L.132 9.21l8.2-1.192z" />
-  </svg>
-);
+// import { Star } from "lucide-react";
+// const HalfStar = () => (
+//   <svg
+//     viewBox="0 0 24 24"
+//     className="w-full h-full"
+//     fill="url(#half)"
+//     xmlns="http://www.w3.org/2000/svg"
+//   >
+//     <defs>
+//       <linearGradient id="half">
+//         <stop offset="50%" stopColor="#FFC107" />
+//         <stop offset="50%" stopColor="white" />
+//       </linearGradient>
+//     </defs>
+//     <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.782 1.401 8.169L12 18.896l-7.335 3.865 1.401-8.169L.132 9.21l8.2-1.192z" />
+//   </svg>
+// );
 export default function Home() {
   return (
     <>
@@ -37,7 +37,7 @@ export default function Home() {
              before:absolute before:inset-0 before:rounded-lg before:border before:border-[#C7C7C7]/20 
              before:pointer-events-none"
             >
-              <div className="  flex items-end gap-2 ">
+              <div className="  flex items-center md:items-end gap-1 md:gap-2 ">
                 <p className="text-black  z-10 md:text-sm text-[7.48px] font-semibold">
                   Trusted by 5,000+ Clients Worldwide
                 </p>
@@ -45,24 +45,31 @@ export default function Home() {
                   ( 4.9 rating
                 </p>
 
-                <div className="flex items-end gap-1 text-[7.48px] pb-0 md:pb-1 z-10 font-normal md:text-sm text-[#FFC107] ">
+                <div className="flex items-start md:items-end gap-1 text-[7.48px] pb-0 md:pb-1 z-10 font-normal md:text-sm">
                   {/* 4 full yellow stars */}
                   {[...Array(4)].map((_, index) => (
-                    <Star key={index} size={9} className="fill-[#FFC107]" />
-                  ))}
-
-                  {/* Half star using clipped overlay */}
-                  <div className="relative w-[4.94px] h-[8.66px] md:w-[9.24px] md:h-[8.73px]">
-                    {/* Base white star */}
-                    <Star size={9} className="fill-white text-white" />
-
-                    {/* Overlay left half yellow star */}
-                    <div className="absolute top-0 left-0 md:w-1/2 w-2/2 h-full overflow-hidden">
-                      <Star
-                        size={9}
-                        className="fill-[#FFC107] text-[#FFC107]"
+                    <div
+                      key={index}
+                      className="relative w-[4.94px] h-[4.66px] md:w-[9.24px] md:h-[8.73px]"
+                    >
+                      <Image
+                        src="/images/icons/star.svg"
+                        alt="Full Star"
+                        fill
+                        className="object-contain"
                       />
                     </div>
+                  ))}
+
+                  {/* Half star */}
+                  {/* Half star as static image using Next.js Image */}
+                  <div className="relative w-[4.94px] h-[4.66px] md:w-[9.24px] md:h-[8.73px]">
+                    <Image
+                      src="/images/icons/half_star.svg"
+                      alt="Half Star"
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                 </div>
 
@@ -76,7 +83,7 @@ export default function Home() {
               <div className="clients-icons gap-5 flex">
                 <span>
                   <svg
-                    className="w-[74px] h-[19px] md:w-[112px] md:h-[37px]"
+                    className="w-[60.29px] h-[19.78px] md:w-[112.85px] md:h-[37.03px]"
                     viewBox="0 0 113 39"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -122,29 +129,29 @@ export default function Home() {
 
                 <span>
                   <Image
-                    src="/images/icons/trustpilpt.svg"
-                    alt="Arrow Icon"
+                    src="/images/icons/trustpilpt.png"
+                    alt="trustpilpt"
                     width={138.75}
                     height={37}
-                    priority
+                    className="w-[74.13px] h-[19.77px] md:w-[138.75px] md:h-[37px]"
                   />
                 </span>
                 <span>
                   <Image
-                    src="/images/icons/clutch.svg"
-                    alt="Arrow Icon"
+                    src="/images/icons/clutch.png"
+                    alt="clutch"
                     width={112.85}
                     height={37.14}
-                    priority
+                    className="w-[60.29px] h-[19.84px] md:w-[112.85px] md:h-[37.14px]"
                   />
                 </span>
                 <span>
                   <Image
-                    src="/images/icons/goodfirms.svg"
-                    alt="Arrow Icon"
+                    src="/images/icons/goodfirms.png"
+                    alt="goodfirms"
                     width={162.8}
                     height={36.9}
-                    priority
+                    className="w-[86.98px] h-[19.72px] md:w-[162.8px] md:h-[36.9px]"
                   />
                 </span>
               </div>
@@ -200,9 +207,9 @@ export default function Home() {
           /> */}
           {/* Text Overlay */}
           <div className=" absolute top-1 md:top-auto md:bottom-0  left-0 md:left-[12] right-0 px-[15px] md:px-12 p-10">
-            <p className="text-sm font-thin  text-white/75  mb-2 leading-[18px] md:text-xl md:leading-[26px]">
+            <span className="text-sm font-thin  text-white/75  mb-2 leading-[18px] md:text-xl md:leading-[26px]">
               Recognized as the Most Trusted
-            </p>
+            </span>
 
             <div className="inline-flex items-center mb-0 flex-wrap">
               <h2 className="text-white text-[28px] sm:text-4xl md:text-5xl pt-2 leading-[135%] md:leading-[120%] font-normal">
@@ -347,7 +354,7 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div className=" container-width mx-auto inner-location-section flex flex-col lg:flex-row md:gap-[222px] gap-[16px]">
+        <div className=" container-width mx-auto inner-location-section flex flex-wrap flex-col lg:flex-row md:gap-[222px] gap-[16px]">
           {/* First Location */}
           <div className=" flex">
             <div className="border-l border-white/10 bg-[#5098D6]/50 rounded-[3px] h-auto mr-[30px]"></div>

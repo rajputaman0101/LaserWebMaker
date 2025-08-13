@@ -56,12 +56,12 @@ export default function About_section() {
       <div className="container-width mx-auto inner-row-section flex gap-[30%]">
         <div className="grid grid-cols-1 md:[grid-template-columns:2fr_3fr_1.5fr] gap-[30px] w-full ">
           {/* Left Column with Actual Image Size */}
-          <div className="flex items-center justify-center h-full relative min-h-[400px]">
+          <div className="flex items-center justify-center h-full relative min-h-[620px] md:min-h-[400px]">
             <Image
-              src="/images/home_img/about-img1.png"
+              src="/images/home_img/about-img1.jpg"
               alt="Banner Image 1"
               fill
-              className="object-cover  rounded-xl"
+              className="object-cover  rounded-xl min-h-[620px] md:min-h-[400px]"
               priority
             />
           </div>
@@ -186,7 +186,7 @@ export default function About_section() {
       {counterData.map((item, index) => (
         <div key={index} className=" rounded-lg h-full"
         style={{ backgroundColor: item.bg }}>
-          <div className="inner items-center flex gap-4 md:gap-0 flex-col md:flex-row justify-center px-5  pt-[10px] md:justify-between">
+          <div className="inner  md:items-center flex gap-4 md:gap-0 flex-col md:flex-row justify-center px-5  pt-[10px] md:justify-between">
             <div className="counter">
               {/* <h2 className="text-black text-[28px] font-bold leading-[36px]">
                 {hasViewed ? <CountUp start={0} end={item.value} duration={2} /> : 0}
