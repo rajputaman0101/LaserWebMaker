@@ -53,7 +53,7 @@ export default function Home() {
                       className="relative w-[4.94px] h-[4.66px] md:w-[9.24px] md:h-[8.73px]"
                     >
                       <Image
-                        src="/images/icons/star.svg"
+                        src="/images/icons/half_star.svg"
                         alt="Full Star"
                         fill
                         priority
