@@ -19,7 +19,7 @@ const tabs = [
       "/images/home_img/technologytabs/javascript.svg",
       "/images/home_img/technologytabs/jquery.svg",
       "/images/home_img/technologytabs/react.svg",
-      "/images/home_img/technologytabs/bootstrap.svg",
+      "/images/home_img/technologytabs/bootstrap-icon.svg",
       "/images/home_img/technologytabs/tailwind.svg",
        "/images/home_img/technologytabs/wordpress.svg",
       "/images/home_img/technologytabs/shopify.svg",
@@ -57,7 +57,7 @@ const tabs = [
     key: "frameworks",
     logos: [
       "/images/home_img/technologytabs/react.svg",
-      "/images/home_img/technologytabs/bootstrap.svg",
+      "/images/home_img/technologytabs/bootstrap-icon.svg",
       "/images/home_img/technologytabs/tailwind.svg",
       "/images/home_img/technologytabs/express.svg",
 
