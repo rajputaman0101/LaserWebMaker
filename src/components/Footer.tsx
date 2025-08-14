@@ -114,7 +114,7 @@ export default function Footer() {
               <div>
                 <span className="text-white/90 text-[13px]">
                   Laser Web Maker has well qualified and experienced team to
-                  build most creative &amp; attractive websites. We have different
+                  build most creative & attractive websites. We have different
                   plans that can fit in your budgets easily. We deal in Website
                   Designing, Website Development, E-Commerce Website, Logo
                   Designing, Template Designing, CMS Development, Catalog
@@ -124,7 +124,7 @@ export default function Footer() {
                 <br />
                 <span className="text-white/80 text-[13px]">
                   Laser Web Maker has well qualified and experienced team to
-                  build most creative &amp; attractive websites. We have different
+                  build most creative & attractive websites. We have different
                   plans that can fit in your budgets easily. We deal in Website
                   Designing, Website Development, E-Commerce Website, Logo
                   Designing, Template Designing, CMS Development, Catalog
