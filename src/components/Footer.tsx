@@ -119,7 +119,7 @@ export default function Footer() {
                   Designing, Website Development, E-Commerce Website, Logo
                   Designing, Template Designing, CMS Development, Catalog
                   Designing, etc. Building long-term relationships with our
-                  clients is Laser Web Maker&apos;s No.1 priority.
+                  clients is Laser Web Maker's No.1 priority.
                 </span>
                 <br />
                 <span className="text-white/80 text-[13px]">
@@ -129,7 +129,7 @@ export default function Footer() {
                   Designing, Website Development, E-Commerce Website, Logo
                   Designing, Template Designing, CMS Development, Catalog
                   Designing, etc. Building long-term relationships with our
-                  clients is Laser Web Maker&apos;s No.1 priority. 95% of our customers
+                  clients is Laser Web Maker's No.1 priority. 95% of our customers
                   return to us with new projects because they enjoy the quality
                   of the websites that we create.
                 </span>
