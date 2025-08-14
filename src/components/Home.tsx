@@ -56,6 +56,7 @@ export default function Home() {
                         src="/images/icons/star.svg"
                         alt="Full Star"
                         fill
+                        priority
                         className="object-contain"
                       />
                     </div>
@@ -68,6 +69,7 @@ export default function Home() {
                       src="/images/icons/half_star.svg"
                       alt="Half Star"
                       fill
+                      priority
                       className="object-contain"
                     />
                   </div>
