@@ -27,7 +27,7 @@ export default function Footer() {
                 alt="Map Desktop"
                 width={992}
                 height={250}
-                className="object-contain"
+                className="object-contain w-[992px] h-[250px]"
               />
             </div>
 

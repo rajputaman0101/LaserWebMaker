@@ -150,7 +150,7 @@ export default function TechnologyTabs() {
 
                 <Swiper
                   modules={[Navigation]}
-                  loop={true}
+                  loop={false}
                   navigation={{
                     prevEl: prevRef.current,
                     nextEl: nextRef.current,

@@ -24,32 +24,32 @@ const videoData: VideoItem[] = [
   {
     id: 2,
     thumbnail: "/images/our-clients-img/client-feedback-img.jpg",
-    videoSrc: "https://www.w3schools.com/html/movie.mp4",
+    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 3,
     thumbnail: "/images/our-clients-img/client-feedback-img.jpg",
-    videoSrc: "https://www.w3schools.com/html/movie.mp4",
+    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 5,
     thumbnail: "/images/our-clients-img/client-feedback-img.jpg",
-    videoSrc: "https://www.w3schools.com/html/movie.mp4",
+    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 6,
     thumbnail: "/images/our-clients-img/client-feedback-img.jpg",
-    videoSrc: "https://www.w3schools.com/html/movie.mp4",
+    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 7,
     thumbnail: "/images/our-clients-img/client-feedback-img.jpg",
-    videoSrc: "https://www.w3schools.com/html/movie.mp4",
+    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 8,
     thumbnail: "/images/our-clients-img/client-feedback-img.jpg",
-    videoSrc: "https://www.w3schools.com/html/movie.mp4",
+    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
 ];
 
