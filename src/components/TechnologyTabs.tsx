@@ -16,14 +16,17 @@ const tabs = [
     logos: [
       "/images/home_img/technologytabs/html.svg",
       "/images/home_img/technologytabs/css.svg",
-      "/images/home_img/technologytabs/phpmysql.svg",
-      "/images/home_img/technologytabs/wordpress.svg",
-      "/images/home_img/technologytabs/magento.svg",
-      "/images/home_img/technologytabs/laravel.svg",
-      "/images/home_img/technologytabs/joomla.svg",
-      "/images/home_img/technologytabs/prestashop.svg",
-      "/images/home_img/technologytabs/drupal.svg",
+      "/images/home_img/technologytabs/javascript.svg",
+      "/images/home_img/technologytabs/jquery.svg",
+      "/images/home_img/technologytabs/react.svg",
       "/images/home_img/technologytabs/bootstrap.svg",
+      "/images/home_img/technologytabs/tailwind.svg",
+       "/images/home_img/technologytabs/wordpress.svg",
+      "/images/home_img/technologytabs/shopify.svg",
+      "/images/home_img/technologytabs/nextjs.svg",
+      "/images/home_img/technologytabs/typescript.svg",
+     
+     
     ],
   },
   {
@@ -31,33 +34,55 @@ const tabs = [
     key: "backend",
     logos: [
       "/images/home_img/technologytabs/nodejs.svg",
+      "/images/home_img/technologytabs/express.svg",
+      "/images/home_img/technologytabs/php.svg",
       "/images/home_img/technologytabs/laravel.svg",
+      "/images/home_img/technologytabs/wordpress.svg",
+      "/images/home_img/technologytabs/shopify.svg",
       "/images/home_img/technologytabs/joomla.svg",
       "/images/home_img/technologytabs/prestashop.svg",
-      
-      
-      ],
+    ],
   },
-  { label: "Database", key: "database", logos: ["/images/home_img/technologytabs/phpmysql.svg",] },
-  { label: "Frameworks", key: "frameworks", logos: ["/images/home_img/technologytabs/bootstrap.svg",] },
+  {
+    label: "Database",
+    key: "database",
+    logos: [
+      "/images/home_img/technologytabs/phpmysql.svg",
+      "/images/home_img/technologytabs/mongodb.svg",
+      "/images/home_img/technologytabs/postgresql.svg",
+    ],
+  },
+  {
+    label: "Frameworks",
+    key: "frameworks",
+    logos: [
+      "/images/home_img/technologytabs/react.svg",
+      "/images/home_img/technologytabs/bootstrap.svg",
+      "/images/home_img/technologytabs/tailwind.svg",
+      "/images/home_img/technologytabs/express.svg",
+
+    ],
+  },
   {
     label: "CMS",
     key: "cms",
     logos: [
-
-      "/images/home_img/technologytabs/react.svg",
       "/images/home_img/technologytabs/wordpress.svg",
-      "/images/home_img/technologytabs/magento.svg",
-      "/images/home_img/technologytabs/laravel.svg",
+      "/images/home_img/technologytabs/shopify.svg",
       "/images/home_img/technologytabs/joomla.svg",
-      "/images/home_img/technologytabs/prestashop.svg",
       "/images/home_img/technologytabs/drupal.svg",
+      "/images/home_img/technologytabs/magento.svg",
+      "/images/home_img/technologytabs/prestashop.svg",
+     
     ],
   },
   {
     label: "E-commerce",
     key: "ecommerce",
-    logos: [ "/images/home_img/technologytabs/wordpress.svg",
+    logos: [
+      "/images/home_img/technologytabs/wordpress.svg",
+      "/images/home_img/technologytabs/woocommerce.svg",
+      "/images/home_img/technologytabs/shopify.svg",
       "/images/home_img/technologytabs/magento.svg",
       "/images/home_img/technologytabs/joomla.svg",
       "/images/home_img/technologytabs/prestashop.svg",
@@ -153,7 +178,7 @@ export default function TechnologyTabs() {
                       key={i}
                       className=" flex justify-center items-center"
                     >
-                      <div className="relative w-full h-[74px] rounded-xl hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                      <div className="relative w-full h-[74px] rounded-xl hover:scale-90 transition-transform duration-300 flex items-center justify-center">
                         <Image
                           src={src}
                           alt={`Logo ${i}`}

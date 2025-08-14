@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Download } from "lucide-react";
-
+const currentYear: number = new Date().getFullYear();
 interface FooterSection {
   heading: string;
   links: string[];
@@ -11,6 +11,8 @@ const footerSections: FooterSection[] = Array.from({ length: 8 }, () => ({
   heading: "Heading",
   links: Array.from({ length: 8 }, () => "Link name"),
 }));
+
+
 
 export default function Footer() {
   return (
@@ -167,9 +169,9 @@ export default function Footer() {
           <div className="flex py-[20px] border-t border-t-[#FFFFFF]/50">
             <div className="flex flex-col md:flex-row justify-between w-full gap-10">
               <div className="w-full md:w-1/2 order-2 md:order-1 flex flex-col gap-4 md:gap-[30px]">
-                <h5 className="text-white text-[15px] font-semibold leading-[150%]">
-                  &copy; {new Date().getFullYear()} Laser Web Maker
-                </h5>
+                 <h5 className="text-white text-[15px] font-semibold leading-[150%]">
+      &copy; {currentYear} Laser Web Maker
+    </h5>
                 <div className="flex gap-4 md:gap-[40px] items-start md:items-end">
                   <div className="flex flex-col md:gap-1 gap-4">
                     <div>

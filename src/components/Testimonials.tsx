@@ -158,7 +158,7 @@ export default function Testimonials() {
                                     className="relative w-[9.24px] h-[8.73px]"
                                   >
                                     <Image
-                                      src="/images/icons/star.svg"
+                                      src="/images/icons/full-star.svg"
                                       alt="Full Star"
                                       fill
                                       className="object-contain"

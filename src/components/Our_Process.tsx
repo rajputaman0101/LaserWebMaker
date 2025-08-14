@@ -146,7 +146,7 @@ export default function Our_Process() {
                           contentRefs.current[idx] = el;
                         }}
                         style={{
-                          height: heights[idx],
+                          maxHeight: heights[idx],
                           overflow: "hidden",
                           transition: "height 0.4s ease",
                         }}

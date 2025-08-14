@@ -121,7 +121,8 @@ export default function Header() {
                     transform: `translateX(calc(-${servicesButtonOffset}px))`,
                     width: "100vw",
                     // fixed site width
-                    maxWidth: "1440px", // responsive
+                    maxWidth: "100vw", // responsive
+                    minWidth:"100vw",
                     overflowX: "hidden",
                   }}
                   onMouseLeave={() => setIsDesktopSubOpen(false)}

@@ -31,29 +31,29 @@ export default function Home() {
             priority
           />
           {/* Text Overlay */}
-          <div className=" absolute bottom-3 left-0 right-0  px-[15px] md:px-[60px]  pb-4 ">
+          <div className=" absolute bottom-0 md:bottom-3 left-0 right-0  px-[15px] md:px-[60px]  pb-4 ">
             <div
-              className="p-5 relative bg-white/10 backdrop-blur-[15px] rounded-lg overflow-hidden
+              className="p-5 relative bg-white/10 backdrop-blur-[5px] rounded-lg overflow-hidden
              before:absolute before:inset-0 before:rounded-lg before:border before:border-[#C7C7C7]/20 
              before:pointer-events-none"
             >
               <div className="  flex items-center md:items-end gap-1 md:gap-2 ">
-                <p className="text-black  z-10 md:text-sm text-[7.48px] font-semibold">
+                <p className="text-black  z-10 md:text-sm text-[10px] font-semibold">
                   Trusted by 5,000+ Clients Worldwide
                 </p>
-                <p className="text-black md:text-sm text-[7.48px] z-10 font-normal ">
+                <p className="text-black md:text-sm text-[10px] z-10 font-normal ">
                   ( 4.9 rating
                 </p>
 
-                <div className="flex items-start md:items-end gap-1 text-[7.48px] pb-0 md:pb-1 z-10 font-normal md:text-sm">
+                <div className="flex items-start md:items-end gap-1 text-[10px] pb-0 md:pb-1 z-10 font-normal md:text-sm">
                   {/* 4 full yellow stars */}
                   {[...Array(4)].map((_, index) => (
                     <div
                       key={index}
-                      className="relative w-[4.94px] h-[4.66px] md:w-[9.24px] md:h-[8.73px]"
+                      className="relative w-[5.94px] h-[5.66px] md:w-[9.24px] md:h-[8.73px]"
                     >
                       <Image
-                        src="/images/icons/star.svg"
+                        src="/images/icons/full-star.svg"
                         alt="Full Star"
                         fill
                         priority
@@ -64,7 +64,7 @@ export default function Home() {
 
                   {/* Half star */}
                   {/* Half star as static image using Next.js Image */}
-                  <div className="relative w-[4.94px] h-[4.66px] md:w-[9.24px] md:h-[8.73px]">
+                  <div className="relative w-[5.94px] h-[5.66px] md:w-[9.24px] md:h-[8.73px]">
                     <Image
                       src="/images/icons/half_star.svg"
                       alt="Half Star"
