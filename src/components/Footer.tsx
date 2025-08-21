@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Download } from "lucide-react";
+import MobileDropdown from "./MobileDropdown";
 const currentYear: number = new Date().getFullYear();
 interface FooterSection {
   heading: string;
@@ -31,14 +32,14 @@ export default function Footer() {
             </div>
 
             {/* Mobile Map Image (visible only on mobile) */}
-            <div className="absolute inset-0 items-center justify-center pointer-events-none z-10 md:hidden">
+            <div className="absolute inset-0 items-center justify-center pointer-events-none z-10 lg:hidden  md:hidden">
               <Image
                 src="/images/footer/footer-phone-map.png"
                 alt="Map Mobile"
                 width={400}
                 height={250}
                 priority
-                className="object-contain"
+                className="object-contain w-full"
               />
             </div>
 

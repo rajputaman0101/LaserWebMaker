@@ -3,6 +3,8 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import MobileDropdown from "./MobileDropdown";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,6 +57,14 @@ export default function Header() {
       setServicesButtonOffset(rect.left);
     }
   }, [isClient]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
 
   return (
     <header
@@ -122,7 +132,7 @@ export default function Header() {
                     width: "100vw",
                     // fixed site width
                     maxWidth: "100vw", // responsive
-                    minWidth:"100vw",
+                    minWidth: "100vw",
                     overflowX: "hidden",
                   }}
                   onMouseLeave={() => setIsDesktopSubOpen(false)}
@@ -557,121 +567,142 @@ export default function Header() {
       </div>
 
       {/* Mobile Nav */}
-      {isOpen && (
-        <div className=" lg:hidden px-[60px] py-10  space-y-3">
-          <Link
-            href="/"
-            className="block text-white text-opacity-80 hover:text-blue-600"
-            onClick={() => setIsOpen(false)}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-[80px] h-[calc(100vh-80px)] left-0 w-full  bg-black z-40 overflow-y-auto px-[15px] py-5 space-y-3"
           >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="block text-white text-opacity-80 hover:text-blue-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Company Overview
-          </Link>
-
-          <div>
-            <button
-              onClick={() => setIsMobileSubOpen(!isMobileSubOpen)}
-              className="flex items-center justify-between w-full text-white hover:text-blue-600 transition-colors duration-200"
+            <Link
+              href="/"
+              className="block text-white text-opacity-80 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
             >
-              Services
-              <ChevronDown
-                className={`ml-1 h-4 w-4 transition-transform duration-500 ${
-                  isMobileSubOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-
-            {/* Animated submenu */}
-            <div
-              className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileSubOpen ? "block" : "hidden"}
-`}
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="block text-white text-opacity-80 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
             >
-              <div className="pl-4 mt-2 space-y-1">
-                <Link
-                  href="/services/web"
-                  className="block text-white hover:text-blue-600 transition-colors"
-                  onClick={() => {
-                    setIsOpen(false);
-                    setIsMobileSubOpen(false);
-                  }}
-                >
-                  Web Development
-                </Link>
-                <Link
-                  href="/services/seo"
-                  className="block text-white hover:text-blue-600 transition-colors"
-                  onClick={() => {
-                    setIsOpen(false);
-                    setIsMobileSubOpen(false);
-                  }}
-                >
-                  SEO
-                </Link>
-                <Link
-                  href="/services/design"
-                  className="block text-white hover:text-blue-600 transition-colors"
-                  onClick={() => {
-                    setIsOpen(false);
-                    setIsMobileSubOpen(false);
-                  }}
-                >
-                  Graphic Design
-                </Link>
-              </div>
-            </div>
-          </div>
+              Company Overview
+            </Link>
 
-          <Link
-            href="/portfolio"
-            className="block text-white text-opacity-80 hover:text-blue-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Portfolio
-          </Link>
-          <Link
-            href="/packages"
-            className="block text-white text-opacity-80 hover:text-blue-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Packages
-          </Link>
-          <Link
-            href="/blogs"
-            className="block text-white text-opacity-80 hover:text-blue-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Blogs
-          </Link>
-          <Link
-            href="/join"
-            className="block text-white text-opacity-80 hover:text-blue-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Join
-          </Link>
-          <Link
-            href="/contact"
-            className="block text-white text-opacity-80 hover:text-blue-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact
-          </Link>
+           <div>
+  <button
+    onClick={() => setIsMobileSubOpen(!isMobileSubOpen)}
+    className="flex items-center justify-between w-full text-white hover:text-blue-600 transition-colors duration-200"
+  >
+    Services
+    <ChevronDown
+      className={`ml-1 h-4 w-4 transition-transform duration-500 ${
+        isMobileSubOpen ? "rotate-180" : ""
+      }`}
+    />
+  </button>
 
-          <Link
-            href="/get-started"
-            className="inline-block btn-color text-white hover:bg-blue-700 mt-2"
-            onClick={() => setIsOpen(false)}
-          >
-            Get a Free Quote
-          </Link>
-        </div>
-      )}
+  <AnimatePresence initial={false}>
+    {isMobileSubOpen && (
+      <motion.div
+        key="mobile-submenu"
+       initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="overflow-hidden mt-4"
+      >
+        {/* Your dropdown items */}
+        <MobileDropdown
+          title="Designing Services"
+          items={[
+            { label: "Website Designing", href: "/nextjs" },
+            { label: "Catalog Designing", href: "/nextjs" },
+            { label: "Emailer Designing", href: "/nextjs" },
+            { label: "PSD To HTML Designing", href: "/nextjs" },
+            { label: "Logo Designing", href: "/nextjs" },
+          ]}
+          setIsOpen={setIsOpen}
+        />
+
+        <MobileDropdown
+          title="Manage Databases"
+          items={[
+            { label: "Website Designing", href: "/nextjs" },
+            { label: "Catalog Designing", href: "/nextjs" },
+            { label: "Emailer Designing", href: "/nextjs" },
+            { label: "PSD To HTML Designing", href: "/nextjs" },
+            { label: "Logo Designing", href: "/nextjs" },
+          ]}
+          setIsOpen={setIsOpen}
+        />
+
+        <MobileDropdown
+          title="Networking"
+          items={[
+            { label: "Website Designing", href: "/nextjs" },
+            { label: "Catalog Designing", href: "/nextjs" },
+            { label: "Emailer Designing", href: "/nextjs" },
+          ]}
+          setIsOpen={setIsOpen}
+        />
+      </motion.div>
+    )}
+  </AnimatePresence>
+</div>
+
+
+            <Link
+              href="/portfolio"
+              className="block text-white text-opacity-80 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Portfolio
+            </Link>
+            <Link
+              href="/packages"
+              className="block text-white text-opacity-80 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Packages
+            </Link>
+            <Link
+              href="/blogs"
+              className="block text-white text-opacity-80 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Blogs
+            </Link>
+            <Link
+              href="/join"
+              className="block text-white text-opacity-80 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Join
+            </Link>
+            <Link
+              href="/contact"
+              className="block text-white text-opacity-80 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </Link>
+
+            <Link
+              href="/get-started"
+              className="inline-block btn-color text-white hover:bg-blue-700 mt-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Get a Free Quote
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
+    
   );
+  
+
 }
