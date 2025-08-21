@@ -52,8 +52,8 @@ export default function About_section() {
   }, [inView]);
 
   return (
-    <div className="py-20 px-[15px] md:px-15 bg-[#F6F8FB]">
-      <div className="container-width mx-auto inner-row-section flex gap-[30%]">
+    <div className="container-width py-20 px-[15px] md:px-15 bg-[#F6F8FB]">
+      <div className="  mx-auto inner-row-section flex gap-[30%]">
         <div className="grid grid-cols-1 md:[grid-template-columns:2fr_3fr_1.5fr] gap-[30px] w-full ">
           {/* Left Column with Actual Image Size */}
           <div className="flex items-center justify-center h-full relative min-h-[620px] md:min-h-[400px]">
@@ -182,7 +182,7 @@ export default function About_section() {
 
           {/* Right Column */}
            
-    <div ref={ref} className="grid grid-cols-2 md:grid-cols-1 gap-[20px] h-fit">
+    <div ref={ref} className="grid grid-cols-2 md:grid-cols-1 gap-[20px] ">
       {counterData.map((item, index) => (
         <div key={index} className=" rounded-lg h-full"
         style={{ backgroundColor: item.bg }}>

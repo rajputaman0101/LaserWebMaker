@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { DM_Sans, Red_Hat_Display, Noto_Sans_HK, } from "next/font/google";
 import ScrollbarWatcher from "@/components/ScrollbarWatcher";
 
+
 // Define the font
 import "./globals.css";
 

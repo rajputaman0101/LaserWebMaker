@@ -68,11 +68,11 @@ export default function Header() {
 
   return (
     <header
-      className={`bg-black sticky top-0 z-50 transition-transform duration-500 ${
+      className={`bg-black container-width sticky top-0 z-50 transition-transform duration-500 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="container-width mx-auto px-[15px] md:px-[60px] py-[20px] flex flex-nowrap justify-between items-center">
+      <div className="mx-auto px-[15px] md:px-[60px] py-[20px] flex flex-nowrap justify-between items-center">
         {/* Left Side: Logo + Nav */}
         <div className="flex items-center space-x-10">
           {/* Logo */}
@@ -147,7 +147,7 @@ export default function Header() {
                         {/* Item 1 */}
                         <li className="flex items-center gap-2 text-[13px]">
                           <Link
-                            href="/nextjs"
+                            href="/web-development"
                             className="flex items-center gap-2 text-[13px]"
                           >
                             <Image
@@ -157,7 +157,7 @@ export default function Header() {
                               alt="Next.js"
                               className="border border-black rounded-xl p-1"
                             />
-                            Website Designing
+                            Web Development
                             <span className="text-blue-500 text-xs">New</span>
                           </Link>
                         </li>
@@ -618,7 +618,7 @@ export default function Header() {
         <MobileDropdown
           title="Designing Services"
           items={[
-            { label: "Website Designing", href: "/nextjs" },
+            { label: "Web Development", href: "/web-development" },
             { label: "Catalog Designing", href: "/nextjs" },
             { label: "Emailer Designing", href: "/nextjs" },
             { label: "PSD To HTML Designing", href: "/nextjs" },
@@ -630,7 +630,7 @@ export default function Header() {
         <MobileDropdown
           title="Manage Databases"
           items={[
-            { label: "Website Designing", href: "/nextjs" },
+            { label: "Web Development", href: "/web-development" },
             { label: "Catalog Designing", href: "/nextjs" },
             { label: "Emailer Designing", href: "/nextjs" },
             { label: "PSD To HTML Designing", href: "/nextjs" },

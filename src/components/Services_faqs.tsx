@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -10,30 +11,30 @@ const faqs = [
     image: "/images/services-img/designing-service.png",
     buttons: [
       { text: "Website Design", link: "/services/designing" },
-      { text: "Logo", link: "/logo", },
-      { text: "Catalog", link: "/Catalog", },
-      { text: "E-mail", link: "/e-mail", },
-      { text: "PSD to HTML", link: "/psd-to-html", },
+      { text: "Logo", link: "/logo" },
+      { text: "Catalog", link: "/Catalog" },
+      { text: "E-mail", link: "/e-mail" },
+      { text: "PSD to HTML", link: "/psd-to-html" },
     ],
   },
   {
     question: "Website Development",
     answer:
       "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. ",
-      
-     image: "/images/services-img/website-development.png",
+
+    image: "/images/services-img/website-development.png",
   },
   {
     question: "E-commerce Website Development",
     answer:
       "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. ",
-     image: "/images/services-img/ecommerce-website.png",
+    image: "/images/services-img/ecommerce-website.png",
   },
   {
     question: "Hire Designer and Developer",
     answer:
       "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. ",
-     image: "/images/services-img/hire-developer.png",
+    image: "/images/services-img/hire-developer.png",
   },
 ];
 
@@ -46,14 +47,14 @@ export default function Services_faqs() {
 
   return (
     <div className="bg-white container-width mx-auto ">
-      <div className=" md:px-[60px] py-20 px-[15px]">
+      <div className=" mx-auto md:px-[60px] py-20 px-[15px]">
         <div className="outer-div  grid grid-flow-row gap-[40px]">
           <div className="heading">
             <h2 className="heading-second text-[40px] font-normal leading-[120%] text-black">
               Services
             </h2>
           </div>
-          
+
           <div className="gap-[16px] grid grid-flow-row ">
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
@@ -126,22 +127,21 @@ export default function Services_faqs() {
                       <div className="gap-5 inline-grid pt-5 pr-5">
                         <div className="flex gap-[12px] flex-wrap">
                           {faq.buttons?.map((btn, i) => (
-                            <a
+                            <Link
                               key={i}
                               href={btn.link}
-                              className="px-4 py-2 text-[#589CD5] text-[16px] leading-[150%] rounded-[99px] border border-[#589CD5] hover:bg-[#589CD5] hover:text-white  transition-all inline-block "
+                              passHref
                               target="_blank"
                               rel="noopener noreferrer"
+                              className="px-4 py-2 text-[#589CD5] text-[16px] leading-[150%] rounded-[99px] border border-[#589CD5] hover:bg-[#589CD5] hover:text-white transition-all inline-block"
                             >
                               {btn.text}
-                            </a>
+                            </Link>
                           ))}
                         </div>
-                        <p className="text-[16px] font-normal text-black leading-[150%]">{faq.answer}</p>
-                        {/* <p className="text-[13px] text-gray-500">
-                          Want to know more about this service? Explore the
-                          details below.
-                        </p> */}
+                        <p className="text-[16px] font-normal text-black leading-[150%]">
+                          {faq.answer}
+                        </p>
                       </div>
                     </div>
                   </div>
