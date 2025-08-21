@@ -12,37 +12,37 @@ const footerSections: FooterSection[] = Array.from({ length: 8 }, () => ({
   links: Array.from({ length: 8 }, () => "Link name"),
 }));
 
-
-
 export default function Footer() {
   return (
     <div className="bg-[#000000]">
-      <div className="container-width mx-auto px-[15px] md:px-[60px] py-20">
+      <div className="container-width mx-auto  md:px-[60px] py-20">
         <div className="flex flex-col gap-10">
           <div className="footer-location relative md:h-[250px] h-full">
             {/* Desktop Map Image (hidden on mobile) */}
-            <div className="absolute inset-0 items-center justify-center pointer-events-none z-10 flex md:flex">
+            <div className="absolute inset-0 items-center justify-center pointer-events-none z-10 flex   md:flex">
               <Image
                 src="/images/footer/map.png"
                 alt="Map Desktop"
                 width={992}
                 height={250}
+                priority
                 className="object-contain w-[992px] h-[250px]"
               />
             </div>
 
             {/* Mobile Map Image (visible only on mobile) */}
-            <div className="absolute inset-0 items-center justify-center pointer-events-none z-10 hidden">
+            <div className="absolute inset-0 items-center justify-center pointer-events-none z-10 md:hidden">
               <Image
-                src="/images/footer/mobile-map.svg"
+                src="/images/footer/footer-phone-map.png"
                 alt="Map Mobile"
                 width={400}
                 height={250}
+                priority
                 className="object-contain"
               />
             </div>
 
-            <div className="inner-location-section flex flex-wrap flex-col lg:flex-row md:gap-30 gap-[16px] bg_footer">
+            <div className="inner-location-section z-10 relative flex flex-wrap flex-col lg:flex-row md:gap-30 gap-[16px] ">
               {/* Location Blocks */}
               {[
                 {
@@ -59,7 +59,7 @@ export default function Footer() {
                 },
               ].map((loc, idx) => (
                 <div key={idx} className="flex">
-                  <div className="border-l border-white/10 bg-[#5098D6]/50 rounded-[3px] h-auto mr-[30px]"></div>
+                  <div className="border-l border-white/10 bg-[#5098D6]/50 rounded-[3px] h-auto mr-[30px] "></div>
                   <div className="first-location inline-grid gap-[14px] h-[132px] w-[295px] md:w-[370px] xl:w-[295px]">
                     <div className="flex items-center gap-3">
                       <div>
@@ -111,29 +111,29 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[80px]">
+          <div className="flex flex-col gap-[80px] px-[15px]">
             <div className="footer-content flex flex-col md:flex-row gap-y-[30px] md:gap-x-[120px] items-start">
               <div>
                 <span className="text-white/90 text-[13px]">
                   Laser Web Maker has well qualified and experienced team to
-                  build most creative &amp; attractive websites. We have different
-                  plans that can fit in your budgets easily. We deal in Website
-                  Designing, Website Development, E-Commerce Website, Logo
-                  Designing, Template Designing, CMS Development, Catalog
+                  build most creative &amp; attractive websites. We have
+                  different plans that can fit in your budgets easily. We deal
+                  in Website Designing, Website Development, E-Commerce Website,
+                  Logo Designing, Template Designing, CMS Development, Catalog
                   Designing, etc. Building long-term relationships with our
                   clients is Laser Web Maker&apos;s No.1 priority.
                 </span>
                 <br />
                 <span className="text-white/80 text-[13px]">
                   Laser Web Maker has well qualified and experienced team to
-                  build most creative &amp; attractive websites. We have different
-                  plans that can fit in your budgets easily. We deal in Website
-                  Designing, Website Development, E-Commerce Website, Logo
-                  Designing, Template Designing, CMS Development, Catalog
+                  build most creative &amp; attractive websites. We have
+                  different plans that can fit in your budgets easily. We deal
+                  in Website Designing, Website Development, E-Commerce Website,
+                  Logo Designing, Template Designing, CMS Development, Catalog
                   Designing, etc. Building long-term relationships with our
-                  clients is Laser Web Maker&apos;s No.1 priority. 95% of our customers
-                  return to us with new projects because they enjoy the quality
-                  of the websites that we create.
+                  clients is Laser Web Maker&apos;s No.1 priority. 95% of our
+                  customers return to us with new projects because they enjoy
+                  the quality of the websites that we create.
                 </span>
               </div>
               <a
@@ -166,12 +166,12 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex py-[20px] border-t border-t-[#FFFFFF]/50">
+          <div className="flex py-[20px] border-t border-t-[#FFFFFF]/50 px-[15px]">
             <div className="flex flex-col md:flex-row justify-between w-full gap-10">
               <div className="w-full md:w-1/2 order-2 md:order-1 flex flex-col gap-4 md:gap-[30px]">
-                 <h5 className="text-white text-[15px] font-semibold leading-[150%]">
-      &copy; {currentYear} Laser Web Maker
-    </h5>
+                <h5 className="text-white text-[15px] font-semibold leading-[150%]">
+                  &copy; {currentYear} Laser Web Maker
+                </h5>
                 <div className="flex gap-4 md:gap-[40px] items-start md:items-end">
                   <div className="flex flex-col md:gap-1 gap-4">
                     <div>
