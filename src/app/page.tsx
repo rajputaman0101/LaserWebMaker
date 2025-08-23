@@ -2,10 +2,10 @@
 
 export const metadata = {
   title: 'Laser Web Maker',
-  description: 'Welcome to Your Company. We offer top-notch services across industries with expert teams and cutting-edge technology.',
-  keywords: ['your company', 'nextjs', 'services', 'industries', 'technology'],
+  description: `Laser Web Maker is an india's most trusted web development company. We are offering website designing & website development services at very low budget.`,
+  keywords: ['Laser Web Maker', 'nextjs', 'services', 'industries', 'technology'],
   openGraph: {
-    title: 'Home | Your Company Name',
+    title: 'Home | Laser Web Maker',
     description: 'We provide top-tier solutions and services tailored to industry needs.',
     url: 'https://yourdomain.com', // replace with your actual domain
     siteName: 'Your Company Name',

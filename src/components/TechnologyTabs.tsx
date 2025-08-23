@@ -121,78 +121,79 @@ export default function TechnologyTabs() {
             </button>
           ))}
         </div>
+          
+          <div>
+            {/* Content with Animation and Swiper */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4 }}
+                className="relative"
+              >
+                {/* Arrows */}
+                <div className="px-[40px] relative">
+                  <div
+                    ref={prevRef}
+                    className="absolute z-10 left-1 md:left-0  top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full cursor-pointer hover:bg-blue-100 transition"
+                  >
+                    <ArrowLeft size={20} />
+                  </div>
+                  <div
+                    ref={nextRef}
+                    className="absolute z-10 right-1 md:right-0  top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full cursor-pointer hover:bg-blue-100 transition"
+                  >
+                    <ArrowRight size={20} />
+                  </div>
 
-        <div>
-          {/* Content with Animation and Swiper */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4 }}
-              className="relative"
-            >
-              {/* Arrows */}
-              <div className="px-[40px] relative">
-                <div
-                  ref={prevRef}
-                  className="absolute z-10 left-1 md:left-0  top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full cursor-pointer hover:bg-blue-100 transition"
-                >
-                  <ArrowLeft size={20} />
+                  <Swiper
+                    modules={[Navigation]}
+                    loop={false}
+                    
+                    navigation={{
+                      prevEl: prevRef.current,
+                      nextEl: nextRef.current,
+                    }}
+                    onBeforeInit={(swiper) => {
+                      // Set custom navigation buttons
+                      if (
+                        typeof swiper.params.navigation !== "boolean" &&
+                        swiper.params.navigation
+                      ) {
+                        swiper.params.navigation.prevEl = prevRef.current;
+                        swiper.params.navigation.nextEl = nextRef.current;
+                      }
+                    }}
+                    spaceBetween={30}
+                    speed={500}
+                    breakpoints={{
+                      320: { slidesPerView: 3 },
+                      640: { slidesPerView: 3 },
+                      1024: { slidesPerView: 9 },
+                    }}
+                  >
+                    {currentLogos.map((src, i) => (
+                      <SwiperSlide
+                        key={i}
+                        className=" flex justify-center items-center"
+                      >
+                        <div className="relative w-full h-[74px] rounded-xl hover:scale-90 transition-transform duration-300 flex items-center justify-center">
+                          <Image
+                            src={src}
+                            alt={`Logo ${i}`}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>
-                <div
-                  ref={nextRef}
-                  className="absolute z-10 right-1 md:right-0  top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full cursor-pointer hover:bg-blue-100 transition"
-                >
-                  <ArrowRight size={20} />
-                </div>
-
-                <Swiper
-                  modules={[Navigation]}
-                  loop={false}
-                  navigation={{
-                    prevEl: prevRef.current,
-                    nextEl: nextRef.current,
-                  }}
-                  onBeforeInit={(swiper) => {
-                    // Set custom navigation buttons
-                    if (
-                      typeof swiper.params.navigation !== "boolean" &&
-                      swiper.params.navigation
-                    ) {
-                      swiper.params.navigation.prevEl = prevRef.current;
-                      swiper.params.navigation.nextEl = nextRef.current;
-                    }
-                  }}
-                  spaceBetween={30}
-                  speed={500}
-                  breakpoints={{
-                    320: { slidesPerView: 3 },
-                    640: { slidesPerView: 3 },
-                    1024: { slidesPerView: 9 },
-                  }}
-                >
-                  {currentLogos.map((src, i) => (
-                    <SwiperSlide
-                      key={i}
-                      className=" flex justify-center items-center"
-                    >
-                      <div className="relative w-full h-[74px] rounded-xl hover:scale-90 transition-transform duration-300 flex items-center justify-center">
-                        <Image
-                          src={src}
-                          alt={`Logo ${i}`}
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
       </div>
     </div>
   );

@@ -87,7 +87,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className=" hidden lg:flex gap-[30px] items-center">
+          <nav className=" hidden show-on-1150 gap-[30px] items-center">
             <Link
               href="/"
               className="block text-white hover:text-blue-600"
@@ -536,7 +536,7 @@ export default function Header() {
         </div>
 
         {/* Right Side: Button */}
-        <div className="hidden lg:block space-x-[30px] items-center">
+        <div className="hidden show-on-1150 space-x-[30px] items-center">
           <Link
             href="/join"
             className="text-white text-opacity-80 hover:text-blue-600"
@@ -559,11 +559,17 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="lg:hidden text-white">
+        {/* <div className="lg:hidden text-white">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-        </div>
+        </div> */}
+        <div className="hide-on-1150 text-white">
+  <button onClick={() => setIsOpen(!isOpen)}>
+    {isOpen ? <X size={24} /> : <Menu size={24} />}
+  </button>
+</div>
+
       </div>
 
       {/* Mobile Nav */}

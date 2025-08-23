@@ -4,6 +4,7 @@ import React from "react";
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import Image from "next/image";
 import 'swiper/css'; // ✅ Required Swiper styles
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
@@ -95,7 +96,8 @@ export default function Serving_Industries() {
                       >
                         <div className="absolute bottom-[10px] text-center w-full text-white p-3">
                           <div className="flex gap-[10px] justify-center items-center">
-                            <img src={card.icon} alt={card.title} className="w-10 h-10" />
+                            <Image src={card.icon} alt={card.title} width={40} height={40} />
+
                             <h3 className="text-[15px] leading-[120%] font-normal">{card.title}</h3>
                           </div>
                         </div>
