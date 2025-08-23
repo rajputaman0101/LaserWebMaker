@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { services, ServiceData, LocationData } from "../../../../data/services";
+import { services, ServiceData, LocationData } from "../../../data/services";
 
 interface PageProps {
   params: {
