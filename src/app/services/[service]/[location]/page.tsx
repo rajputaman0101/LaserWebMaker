@@ -2,7 +2,11 @@ import { notFound } from "next/navigation";
 import { services, ServiceData, LocationData } from "../../../data/services";
 import Header from "@/components/Header";
 
-export async function generateMetadata({ params }: { params: { service: string; location: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { service: string; location: string };
+}) {
   const { service, location } = params;
   const serviceData: ServiceData | undefined = services[service as keyof typeof services];
   const locationData: LocationData | undefined = serviceData?.locations[location];
@@ -34,7 +38,11 @@ export async function generateStaticParams() {
   return paths;
 }
 
-export default function ServiceLocationPage({ params }: { params: { service: string; location: string } }) {
+export default function ServiceLocationPage({
+  params,
+}: {
+  params: { service: string; location: string };
+}) {
   const { service, location } = params;
   const serviceData: ServiceData | undefined = services[service as keyof typeof services];
   const locationData: LocationData | undefined = serviceData?.locations[location];
@@ -47,6 +55,10 @@ export default function ServiceLocationPage({ params }: { params: { service: str
     <>
       <Header />
       <div className="p-8 max-w-4xl mx-auto">
+        <h1 className="text-3xl font-bold text-gray-900">{locationData.title}</h1>
+        <p className="mt-4 text-gray-700">{locationData.description}</p>
+        
+ <div className="p-8 max-w-4xl mx-auto">
         {/* Title & Description */}
         <h1 className="text-3xl font-bold text-gray-900">{locationData?.title}</h1>
         <p className="mt-4 text-gray-700">{locationData?.description}</p>
@@ -79,6 +91,7 @@ export default function ServiceLocationPage({ params }: { params: { service: str
             Get a Free Quote
           </button>
         </section>
+      </div>
       </div>
     </>
   );
