@@ -1,17 +1,8 @@
 import { notFound } from "next/navigation";
-import { Metadata } from "next";
 import { services, ServiceData, LocationData } from "../../../data/services";
 import Header from "@/components/Header";
 
-interface PageProps {
-  params: {
-    service: string;
-    location: string;
-  };
-}
-
-// Dynamic Meta Data for Each Service + Location
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { service: string; location: string } }) {
   const { service, location } = params;
   const serviceData: ServiceData | undefined = services[service as keyof typeof services];
   const locationData: LocationData | undefined = serviceData?.locations[location];
@@ -30,9 +21,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-// Generate All Static Paths
-export async function generateStaticParams(): Promise<PageProps["params"][]> {
-  const paths: PageProps["params"][] = [];
+export async function generateStaticParams() {
+  const paths: { service: string; location: string }[] = [];
 
   Object.keys(services).forEach((service) => {
     const serviceData = services[service as keyof typeof services];
@@ -44,8 +34,7 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
   return paths;
 }
 
-// Actual Page Rendering
-export default function ServiceLocationPage({ params }: PageProps) {
+export default function ServiceLocationPage({ params }: { params: { service: string; location: string } }) {
   const { service, location } = params;
   const serviceData: ServiceData | undefined = services[service as keyof typeof services];
   const locationData: LocationData | undefined = serviceData?.locations[location];
