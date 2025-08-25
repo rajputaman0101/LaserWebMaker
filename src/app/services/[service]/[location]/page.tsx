@@ -42,12 +42,16 @@ export async function generateStaticParams(): Promise<
   return paths;
 }
 
+// --- Page Props Type ---
+interface ServiceLocationPageProps {
+  params: {
+    service: string;
+    location: string;
+  };
+}
+
 // --- Page Component ---
-export default function ServiceLocationPage({
-  params,
-}: {
-  params: { service: string; location: string };
-}) {
+export default function ServiceLocationPage({ params }: ServiceLocationPageProps) {
   const { service, location } = params;
   const serviceData: ServiceData | undefined = services[service];
   const locationData: LocationData | undefined = serviceData?.locations[location];
