@@ -247,27 +247,28 @@ export default function WebsiteDevelopment() {
           <div>
             <h2 className="mb-[16px] text-[32px] md:text-[40px]">About Us</h2>
             <p className="mb-[16px]">
-              Knowing what type of website you need And what the goal of your
-              site is will help you determine which web design company will best
-              suit your needs. There are many types of websites. E-commerce
-              sites, portfolio sites, and informational sites, to name a few.
-              Although many web designers and website development companies have
-              a wide range of abilities, some designers specialize in specific
-              types of sites. Be clear when describing your requirements to your
-              potential web design company. You want to be sure they have
-              experience in designing the type of site you're looking for.
-            </p>
+  Knowing what type of website you need and what the goal of your
+  site is will help you determine which web design company will best
+  suit your needs. There are many types of websites: e-commerce
+  sites, portfolio sites, and informational sites, to name a few.
+  Although many web designers and website development companies have
+  a wide range of abilities, some designers specialize in specific
+  types of sites. Be clear when describing your requirements to your
+  potential web design company. You want to be sure they have
+  experience in designing the type of site you&apos;re looking for.
+</p>
 
-            <p>
-              At some point, your website will need to be updated. Phone numbers
-              change, you may want to update your content, or you'll will need
-              to add or remove products and servuces. Will you be handling the
-              updates yourself? Would you rather your designer update your site?
-              Letting your designer know your choices upfront will help in
-              determining whether you;ll need an easy-to-use content management
-              system or a more sophisticated system meant for website design
-              pros.
-            </p>
+<p>
+  At some point, your website will need to be updated. Phone numbers
+  change, you may want to update your content, or you&apos;ll need
+  to add or remove products and services. Will you be handling the
+  updates yourself? Would you rather your designer update your site?
+  Letting your designer know your choices upfront will help in
+  determining whether you&apos;ll need an easy-to-use content
+  management system or a more sophisticated system meant for website
+  design pros.
+</p>
+
             <Link
               href="/contact-us"
               target="_blank"
