@@ -2,10 +2,10 @@ import { notFound } from "next/navigation";
 import { services, ServiceData, LocationData } from "../../../data/services";
 
 // --- SEO Metadata Generate ---
-export async function generateMetadata({
-  params,
-}: {
-  params: { service: string; location: string };
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { service: string; location: string } 
 }) {
   const { service, location } = params;
   const serviceData: ServiceData | undefined = services[service];
@@ -42,15 +42,7 @@ export async function generateStaticParams(): Promise<
   return paths;
 }
 
-// --- Page Props Type ---
-interface ServiceLocationPageProps {
-  params: {
-    service: string;
-    location: string;
-  };
-}
-
-// --- Page Component ---
+// --- Page Component (INLINE typing, NO custom interface) ---
 export default function ServiceLocationPage({
   params,
 }: {
