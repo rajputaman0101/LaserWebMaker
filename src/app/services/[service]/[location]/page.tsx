@@ -1,11 +1,8 @@
-type ServiceLocationPageProps = {
-  params: {
-    service: string;
-    location: string;
-  };
-};
-
-export default function ServiceLocationPage({ params }: ServiceLocationPageProps) {
+export default function ServiceLocationPage({
+  params,
+}: {
+  params: { service: string; location: string };
+}) {
   const { service, location } = params;
 
   return (
