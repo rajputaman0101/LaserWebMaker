@@ -51,7 +51,11 @@ interface ServiceLocationPageProps {
 }
 
 // --- Page Component ---
-export default function ServiceLocationPage({ params }: ServiceLocationPageProps) {
+export default function ServiceLocationPage({
+  params,
+}: {
+  params: { service: string; location: string };
+}) {
   const { service, location } = params;
   const serviceData: ServiceData | undefined = services[service];
   const locationData: LocationData | undefined = serviceData?.locations[location];
