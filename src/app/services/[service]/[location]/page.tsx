@@ -1,15 +1,12 @@
 import { notFound } from "next/navigation";
 import { services, ServiceData, LocationData } from "../../../data/services";
 
-interface PageProps {
-  params: {
-    service: string;
-    location: string;
-  };
-}
-
 // --- SEO Metadata Generate ---
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { service: string; location: string };
+}) {
   const { service, location } = params;
   const serviceData: ServiceData | undefined = services[service];
   const locationData: LocationData | undefined = serviceData?.locations[location];
@@ -30,8 +27,10 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 // --- Static Params for All Service + Locations ---
-export async function generateStaticParams(): Promise<PageProps["params"][]> {
-  const paths: PageProps["params"][] = [];
+export async function generateStaticParams(): Promise<
+  { service: string; location: string }[]
+> {
+  const paths: { service: string; location: string }[] = [];
 
   Object.keys(services).forEach((service) => {
     const serviceData = services[service];
@@ -44,7 +43,11 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
 }
 
 // --- Page Component ---
-export default function ServiceLocationPage({ params }: PageProps) {
+export default function ServiceLocationPage({
+  params,
+}: {
+  params: { service: string; location: string };
+}) {
   const { service, location } = params;
   const serviceData: ServiceData | undefined = services[service];
   const locationData: LocationData | undefined = serviceData?.locations[location];
