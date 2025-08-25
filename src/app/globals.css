@@ -153,6 +153,9 @@ body::-webkit-scrollbar-thumb:hover {
     width: 320px;
     background-color: #e0f2fe; /* Tailwind blue-100 */
   }
+    h2{
+    font-size: 32px !important;
+  }
 }
 @media (min-width: 1150px) {
   .hide-on-1150 {
@@ -177,7 +180,7 @@ body::-webkit-scrollbar-thumb:hover {
   h1{
     font-size: 43px !important;
   }
-    h2{
+  h2{
     font-size: 32px !important;
   }
   p{
