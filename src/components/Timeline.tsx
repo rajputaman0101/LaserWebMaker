@@ -2,6 +2,19 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
 import { Mouse } from 'lucide-react';
+interface TimelineEntry {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+interface TimelineItemProps {
+  item: TimelineEntry;
+  index: number;
+  colorClass: string;
+}
+
 
 const timelineData = [
   {
@@ -60,7 +73,8 @@ export default function Timeline() {
 
   const colors = ['bg-red-600', 'bg-green-600', 'bg-blue-600'];
 
-  function TimelineItem({ item, index, colorClass }: any) {
+  function TimelineItem({ item, index, colorClass }: TimelineItemProps) {
+
 const ref = useRef<HTMLLIElement | null>(null);
 
   const isInView = useInView(ref, { amount: 0.5 });
