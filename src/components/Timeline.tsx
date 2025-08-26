@@ -61,7 +61,8 @@ export default function Timeline() {
   const colors = ['bg-red-600', 'bg-green-600', 'bg-blue-600'];
 
   function TimelineItem({ item, index, colorClass }: any) {
-  const ref = useRef(null);
+const ref = useRef<HTMLLIElement | null>(null);
+
   const isInView = useInView(ref, { amount: 0.5 });
 
   return (
