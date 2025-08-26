@@ -3,7 +3,7 @@
 "use client";
 
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +13,10 @@ import "swiper/css";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import Timeline from "@/components/Timeline";
+
+import { motion, Variants, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 
 const cards = [
   {
@@ -145,6 +149,58 @@ const faqs = [
   },
 ];
 
+// Animation variants
+const boxVariants: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (custom: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: custom * 0.2,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  }),
+};
+
+interface FeatureBoxProps {
+  feature: Feature;
+  index: number;
+}
+
+const FeatureBox: React.FC<FeatureBoxProps> = ({ feature, index }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      custom={index}
+      variants={boxVariants}
+      initial="hidden"
+      animate={controls}
+      className="box border border-[#D0D0D1] p-6 flex flex-col gap-3 justify-start items-start transition-all duration-300 hover:bg-[#F8F8F8] hover:shadow-md cursor-pointer"
+    >
+      <Image
+        src={feature.icon}
+        alt={feature.title}
+        className="text-black"
+        width={50}
+        height={50}
+      />
+      <h5 className="text-[15px] font-semibold">{feature.title}</h5>
+      <p className="text-[15px] leading-[140%]">{feature.description}</p>
+    </motion.div>
+  );
+};
+
+
 export default function WebsiteDevelopment() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -163,7 +219,7 @@ export default function WebsiteDevelopment() {
             </div>
 
             <div className="flex flex-col justify-center items-center">
-              <h1 className="text-[30px] leading-[100%] md:text-[88px] text-center text-[#212121] font-bold font-[--font-noto-sans-hk]">
+              <h1 className="text-[30px] leading-[100%] md:text-[88px] text-center text-[#212121] font-bold font-[\'Noto_Sans_HK\',sans-serif] ">
                 Website Development Company
               </h1>
             </div>
@@ -234,14 +290,14 @@ export default function WebsiteDevelopment() {
       {/* end the slider  */}
 
       {/* start about page content */}
-      <div className="container-width about-page grid grid-cols-1 md:grid-cols-2 mx-auto px-[15px] md:px-[135px] py-[80px] md:py-[120px] md:gap-[80px] gap-[40px]">
+      <div className="container-width about-page grid grid-cols-1 md:grid-cols-2 mx-auto px-[15px] md:px-[135px] py-[80px] md:py-[120px]  gap-[40px]">
         <div className="img">
           <Image
             src={"/images/web-dev/about-web-dev.jpg"}
             alt="About Web Development"
             width={460}
             height={560}
-            className="w-full h-full mx-auto"
+            className="mx-auto"
           />
         </div>
         <div className="content-about flex  items-center">
@@ -284,7 +340,7 @@ export default function WebsiteDevelopment() {
       {/* end about page content */}
 
       {/* start feature sections */}
-      <div className="feature-section container-width mx-auto px-[15px] md:px-[60px] py-20 bg-[#F6F8FB]">
+      {/* <div className="feature-section container-width mx-auto px-[15px] md:px-[60px] py-20 bg-[#F6F8FB]">
         <h2 className="heading text-center text-[32px] md:text-[40px] mb-[16px]">
           Features of Our Web Development Services
         </h2>
@@ -309,7 +365,22 @@ export default function WebsiteDevelopment() {
             </div>
           ))}
         </div>
+      </div> */}
+
+
+      {/* start feature sections */}
+      <div className="feature-section container-width mx-auto px-[15px] md:px-[60px] py-20 bg-[#F6F8FB]">
+        <h2 className="heading text-center text-[32px] md:text-[40px] mb-[16px]">
+          Features of Our Web Development Services
+        </h2>
+
+        <div className="boxes-section grid grid-cols-1 md:grid-cols-4 gap-[20px]">
+          {features.map((feature, index) => (
+            <FeatureBox key={index} feature={feature} index={index} />
+          ))}
+        </div>
       </div>
+      {/* end feature sections */}
       {/* end feature sections */}
 
       {/* faqs start*/}
@@ -392,7 +463,11 @@ export default function WebsiteDevelopment() {
       </div>
       {/* faqs end*/}
               {/* Timeline start */}
+               <h2 className="heading text-center text-[32px] md:text-[40px] mb-[16px]">
+          Our Development Process
+        </h2>
               <Timeline/>
+             
               {/* Timeline end */}
       {/* testimonials start */}
       <Testimonials />
